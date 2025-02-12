@@ -1,0 +1,29 @@
+[2025-02-05T14:01:56.600+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T14:01:56.610+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: signal_dag.send_signal manual__2025-02-05T14:01:54.507759+00:00 [queued]>
+[2025-02-05T14:01:56.614+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: signal_dag.send_signal manual__2025-02-05T14:01:54.507759+00:00 [queued]>
+[2025-02-05T14:01:56.614+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T14:01:56.721+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): send_signal> on 2025-02-05 14:01:54.507759+00:00
+[2025-02-05T14:01:56.725+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1608) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T14:01:56.727+0000] {standard_task_runner.py:72} INFO - Started process 1609 to run task
+[2025-02-05T14:01:56.728+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'signal_dag', 'send_signal', 'manual__2025-02-05T14:01:54.507759+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/signal_dag.py', '--cfg-path', '/tmp/tmp6yjtf3k7']
+[2025-02-05T14:01:56.730+0000] {standard_task_runner.py:105} INFO - Job 54: Subtask send_signal
+[2025-02-05T14:01:56.770+0000] {task_command.py:467} INFO - Running <TaskInstance: signal_dag.send_signal manual__2025-02-05T14:01:54.507759+00:00 [running]> on host ***-worker-3
+[2025-02-05T14:01:56.822+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='signal_dag' AIRFLOW_CTX_TASK_ID='send_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T14:01:54.507759+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T14:01:54.507759+00:00'
+[2025-02-05T14:01:56.823+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T14:01:56.823+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T14:01:56.823+0000] {logging_mixin.py:190} INFO - Current task name:send_signal state:running start_date:2025-02-05 14:01:56.611020+00:00
+[2025-02-05T14:01:56.824+0000] {logging_mixin.py:190} INFO - Dag name:signal_dag and current dag run status:running
+[2025-02-05T14:01:56.824+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T14:01:56.824+0000] {signal_dag.py:24} INFO - Sending signal to resume workflow
+[2025-02-05T14:01:56.825+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-05T14:01:56.831+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T14:01:56.831+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=signal_dag, task_id=send_signal, run_id=manual__2025-02-05T14:01:54.507759+00:00, execution_date=20250205T140154, start_date=20250205T140156, end_date=20250205T140156
+[2025-02-05T14:01:56.835+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-05T14:01:56.835+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-05T14:01:56.836+0000] {logging_mixin.py:190} INFO - Dag name:signal_dag queued_at:2025-02-05 14:01:54.523387+00:00
+[2025-02-05T14:01:56.836+0000] {logging_mixin.py:190} INFO - Task hostname:***-worker-3 operator:PythonOperator
+[2025-02-05T14:01:56.862+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T14:01:56.873+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T14:01:56.874+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

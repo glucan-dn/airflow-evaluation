@@ -1,0 +1,146 @@
+[2025-02-05T15:09:56.794+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:09:56.803+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:09:31.102192+00:00 [queued]>
+[2025-02-05T15:09:56.807+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:09:31.102192+00:00 [queued]>
+[2025-02-05T15:09:56.808+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:09:56.906+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:09:31.102192+00:00
+[2025-02-05T15:09:56.913+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2658) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:09:56.914+0000] {standard_task_runner.py:72} INFO - Started process 2659 to run task
+[2025-02-05T15:09:56.914+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:09:31.102192+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmp7ns0h5or']
+[2025-02-05T15:09:56.915+0000] {standard_task_runner.py:105} INFO - Job 124: Subtask wait_for_signal
+[2025-02-05T15:09:56.948+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:09:31.102192+00:00 [running]> on host ***-worker-1
+[2025-02-05T15:09:56.994+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:09:31.102192+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:09:31.102192+00:00'
+[2025-02-05T15:09:56.995+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:09:56.996+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:09:56.996+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:09:56.803859+00:00
+[2025-02-05T15:09:56.996+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:09:56.996+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:09:56.997+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:09:57.002+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 348, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 306, in execute
+    raise e
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 286, in execute
+    poke_return = self.poke(context)
+                  ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 254, in poke
+    dttm_filter = self._get_dttm_filter(context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 243, in _get_dttm_filter
+    dttm = self._handle_execution_date_fn(context=context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 456, in _handle_execution_date_fn
+    return kwargs_callable(logical_date, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 217, in kwargs_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/airflow_tasks/execution_date_after_self.py", line 15, in execution_date_after_self
+    session = DagRun.get_session()  # Get database session
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'DagRun' has no attribute 'get_session'
+[2025-02-05T15:09:57.014+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-02-05T15:09:57.014+0000] {logging_mixin.py:190} INFO - Task start:2025-02-05 15:09:56.803859+00:00 end:2025-02-05 15:09:57.014285+00:00 duration:0.210426
+[2025-02-05T15:09:57.015+0000] {logging_mixin.py:190} INFO - Task:<Task(ExternalTaskSensor): wait_for_signal> dag:<DAG: external_signal_workflow> dagrun:<DagRun external_signal_workflow @ 2025-02-05 15:09:31.102192+00:00: manual__2025-02-05T15:09:31.102192+00:00, state:running, queued_at: 2025-02-05 15:09:31.120518+00:00. externally triggered: True>
+[2025-02-05T15:09:57.015+0000] {logging_mixin.py:190} INFO - Failure caused by type object 'DagRun' has no attribute 'get_session'
+[2025-02-05T15:09:57.015+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=external_signal_workflow, task_id=wait_for_signal, run_id=manual__2025-02-05T15:09:31.102192+00:00, execution_date=20250205T150931, start_date=20250205T150956, end_date=20250205T150957
+[2025-02-05T15:09:57.024+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:09:57.024+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 124 for task wait_for_signal (type object 'DagRun' has no attribute 'get_session'; 2659)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 348, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 306, in execute
+    raise e
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 286, in execute
+    poke_return = self.poke(context)
+                  ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 254, in poke
+    dttm_filter = self._get_dttm_filter(context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 243, in _get_dttm_filter
+    dttm = self._handle_execution_date_fn(context=context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 456, in _handle_execution_date_fn
+    return kwargs_callable(logical_date, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 217, in kwargs_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/airflow_tasks/execution_date_after_self.py", line 15, in execution_date_after_self
+    session = DagRun.get_session()  # Get database session
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'DagRun' has no attribute 'get_session'
+[2025-02-05T15:09:57.049+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-05T15:09:57.061+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:09:57.063+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

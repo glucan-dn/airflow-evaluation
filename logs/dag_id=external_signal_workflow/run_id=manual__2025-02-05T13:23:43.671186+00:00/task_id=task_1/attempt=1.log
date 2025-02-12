@@ -1,0 +1,215 @@
+[2025-02-05T13:23:46.471+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T13:23:46.482+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.task_1 manual__2025-02-05T13:23:43.671186+00:00 [queued]>
+[2025-02-05T13:23:46.487+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.task_1 manual__2025-02-05T13:23:43.671186+00:00 [queued]>
+[2025-02-05T13:23:46.488+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T13:23:46.498+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonVirtualenvOperator): task_1> on 2025-02-05 13:23:43.671186+00:00
+[2025-02-05T13:23:46.515+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=969) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T13:23:46.517+0000] {standard_task_runner.py:72} INFO - Started process 970 to run task
+[2025-02-05T13:23:46.517+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'task_1', 'manual__2025-02-05T13:23:43.671186+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmp2efnbjsm']
+[2025-02-05T13:23:46.519+0000] {standard_task_runner.py:105} INFO - Job 32: Subtask task_1
+[2025-02-05T13:23:47.055+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.task_1 manual__2025-02-05T13:23:43.671186+00:00 [running]> on host ***-worker-1
+[2025-02-05T13:23:47.166+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='task_1' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T13:23:43.671186+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T13:23:43.671186+00:00'
+[2025-02-05T13:23:47.168+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T13:23:47.168+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T13:23:47.168+0000] {logging_mixin.py:190} INFO - Current task name:task_1 state:running start_date:2025-02-05 13:23:46.483008+00:00
+[2025-02-05T13:23:47.169+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T13:23:47.169+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T13:23:47.169+0000] {baseoperator.py:421} WARNING - PythonVirtualenvOperator.execute cannot be called outside TaskInstance!
+[2025-02-05T13:23:47.173+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvl8lxh2cd --system-site-packages --python=python
+[2025-02-05T13:23:47.196+0000] {process_utils.py:190} INFO - Output:
+[2025-02-05T13:23:47.954+0000] {process_utils.py:194} INFO - created virtual environment CPython3.12.8.final.0-64 in 260ms
+[2025-02-05T13:23:47.954+0000] {process_utils.py:194} INFO -   creator CPython3Posix(dest=/tmp/venvl8lxh2cd, clear=False, no_vcs_ignore=False, global=True)
+[2025-02-05T13:23:47.954+0000] {process_utils.py:194} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2025-02-05T13:23:47.955+0000] {process_utils.py:194} INFO -     added seed packages: pip==24.3.1
+[2025-02-05T13:23:47.955+0000] {process_utils.py:194} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2025-02-05T13:23:47.975+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvl8lxh2cd/bin/pip install -r /tmp/venvl8lxh2cd/requirements.txt
+[2025-02-05T13:23:47.976+0000] {process_utils.py:190} INFO - Output:
+[2025-02-05T13:23:48.949+0000] {process_utils.py:194} INFO - Requirement already satisfied: pandas==2.1.4 in /home/***/.local/lib/python3.12/site-packages (from -r /tmp/venvl8lxh2cd/requirements.txt (line 1)) (2.1.4)
+[2025-02-05T13:23:48.954+0000] {process_utils.py:194} INFO - Requirement already satisfied: numpy<2,>=1.26.0 in /home/***/.local/lib/python3.12/site-packages (from pandas==2.1.4->-r /tmp/venvl8lxh2cd/requirements.txt (line 1)) (1.26.4)
+[2025-02-05T13:23:48.955+0000] {process_utils.py:194} INFO - Requirement already satisfied: python-dateutil>=2.8.2 in /home/***/.local/lib/python3.12/site-packages (from pandas==2.1.4->-r /tmp/venvl8lxh2cd/requirements.txt (line 1)) (2.9.0.post0)
+[2025-02-05T13:23:48.955+0000] {process_utils.py:194} INFO - Requirement already satisfied: pytz>=2020.1 in /home/***/.local/lib/python3.12/site-packages (from pandas==2.1.4->-r /tmp/venvl8lxh2cd/requirements.txt (line 1)) (2024.2)
+[2025-02-05T13:23:48.956+0000] {process_utils.py:194} INFO - Requirement already satisfied: tzdata>=2022.1 in /home/***/.local/lib/python3.12/site-packages (from pandas==2.1.4->-r /tmp/venvl8lxh2cd/requirements.txt (line 1)) (2024.2)
+[2025-02-05T13:23:48.959+0000] {process_utils.py:194} INFO - Requirement already satisfied: six>=1.5 in /home/***/.local/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas==2.1.4->-r /tmp/venvl8lxh2cd/requirements.txt (line 1)) (1.17.0)
+[2025-02-05T13:23:49.739+0000] {process_utils.py:194} INFO - 
+[2025-02-05T13:23:49.765+0000] {process_utils.py:194} INFO - [notice] A new release of pip is available: 24.3.1 -> 25.0
+[2025-02-05T13:23:49.767+0000] {process_utils.py:194} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2025-02-05T13:23:49.914+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/operators/python.py:535: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  op_kwargs: dict[str, Any] = dict(self.op_kwargs)
+
+[2025-02-05T13:23:49.915+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/operators/python.py:535: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  op_kwargs: dict[str, Any] = dict(self.op_kwargs)
+
+[2025-02-05T13:23:49.916+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/operators/python.py:535: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  op_kwargs: dict[str, Any] = dict(self.op_kwargs)
+
+[2025-02-05T13:23:49.917+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/operators/python.py:535: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  op_kwargs: dict[str, Any] = dict(self.op_kwargs)
+
+[2025-02-05T13:23:49.917+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/operators/python.py:535: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  op_kwargs: dict[str, Any] = dict(self.op_kwargs)
+
+[2025-02-05T13:23:49.918+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/operators/python.py:535: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  op_kwargs: dict[str, Any] = dict(self.op_kwargs)
+
+[2025-02-05T13:23:49.918+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/operators/python.py:535: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  op_kwargs: dict[str, Any] = dict(self.op_kwargs)
+
+[2025-02-05T13:23:49.919+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/operators/python.py:535: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  op_kwargs: dict[str, Any] = dict(self.op_kwargs)
+
+[2025-02-05T13:23:49.920+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/operators/python.py:535: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  op_kwargs: dict[str, Any] = dict(self.op_kwargs)
+
+[2025-02-05T13:23:49.920+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/operators/python.py:535: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  op_kwargs: dict[str, Any] = dict(self.op_kwargs)
+
+[2025-02-05T13:23:49.920+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/operators/python.py:535: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  op_kwargs: dict[str, Any] = dict(self.op_kwargs)
+
+[2025-02-05T13:23:49.921+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/operators/python.py:535: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  op_kwargs: dict[str, Any] = dict(self.op_kwargs)
+
+[2025-02-05T13:23:49.922+0000] {python.py:513} INFO - Use 'pickle' as serializer.
+[2025-02-05T13:23:49.923+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:380: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  items = [(key, self[key]) for key in self._context]
+
+[2025-02-05T13:23:49.924+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:380: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  items = [(key, self[key]) for key in self._context]
+
+[2025-02-05T13:23:49.924+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:380: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  items = [(key, self[key]) for key in self._context]
+
+[2025-02-05T13:23:49.924+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:380: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  items = [(key, self[key]) for key in self._context]
+
+[2025-02-05T13:23:49.925+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:380: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  items = [(key, self[key]) for key in self._context]
+
+[2025-02-05T13:23:49.925+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:380: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  items = [(key, self[key]) for key in self._context]
+
+[2025-02-05T13:23:49.926+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:380: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  items = [(key, self[key]) for key in self._context]
+
+[2025-02-05T13:23:49.926+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:380: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  items = [(key, self[key]) for key in self._context]
+
+[2025-02-05T13:23:49.926+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:380: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  items = [(key, self[key]) for key in self._context]
+
+[2025-02-05T13:23:49.927+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:380: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  items = [(key, self[key]) for key in self._context]
+
+[2025-02-05T13:23:49.927+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:380: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  items = [(key, self[key]) for key in self._context]
+
+[2025-02-05T13:23:49.928+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:380: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  items = [(key, self[key]) for key in self._context]
+
+[2025-02-05T13:23:49.973+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 870, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 544, in _execute_python_callable_in_subprocess
+    self._write_args(input_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 514, in _write_args
+    file.write_bytes(self.pickling_library.dumps({"args": self.op_args, "kwargs": self.op_kwargs}))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot pickle 'module' object
+[2025-02-05T13:23:50.004+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-02-05T13:23:50.004+0000] {logging_mixin.py:190} INFO - Task start:2025-02-05 13:23:46.483008+00:00 end:2025-02-05 13:23:50.003466+00:00 duration:3.520458
+[2025-02-05T13:23:50.005+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonVirtualenvOperator): task_1> dag:<DAG: external_signal_workflow> dagrun:<DagRun external_signal_workflow @ 2025-02-05 13:23:43.671186+00:00: manual__2025-02-05T13:23:43.671186+00:00, state:running, queued_at: 2025-02-05 13:23:43.696280+00:00. externally triggered: True>
+[2025-02-05T13:23:50.006+0000] {logging_mixin.py:190} INFO - Failure caused by cannot pickle 'module' object
+[2025-02-05T13:23:50.006+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=external_signal_workflow, task_id=task_1, run_id=manual__2025-02-05T13:23:43.671186+00:00, execution_date=20250205T132343, start_date=20250205T132346, end_date=20250205T132350
+[2025-02-05T13:23:50.024+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T13:23:50.025+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 32 for task task_1 (cannot pickle 'module' object; 970)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 870, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 544, in _execute_python_callable_in_subprocess
+    self._write_args(input_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 514, in _write_args
+    file.write_bytes(self.pickling_library.dumps({"args": self.op_args, "kwargs": self.op_kwargs}))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot pickle 'module' object
+[2025-02-05T13:23:50.069+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-05T13:23:50.876+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T13:23:50.878+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

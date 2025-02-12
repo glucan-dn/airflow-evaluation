@@ -1,0 +1,55 @@
+[2025-02-10T09:18:57.921+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-10T09:18:57.931+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: cluster_deployment.run_pre_check manual__2025-02-10T09:18:23.744625+00:00 [queued]>
+[2025-02-10T09:18:57.941+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: cluster_deployment.run_pre_check manual__2025-02-10T09:18:23.744625+00:00 [queued]>
+[2025-02-10T09:18:57.941+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-10T09:18:57.956+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonVirtualenvOperator): run_pre_check> on 2025-02-10 09:18:23.744625+00:00
+[2025-02-10T09:18:57.963+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=14220) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-10T09:18:57.964+0000] {standard_task_runner.py:72} INFO - Started process 14221 to run task
+[2025-02-10T09:18:57.965+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'cluster_deployment', 'run_pre_check', 'manual__2025-02-10T09:18:23.744625+00:00', '--job-id', '492', '--raw', '--subdir', 'DAGS_FOLDER/cluster_deployment.py', '--cfg-path', '/tmp/tmptut_7ser']
+[2025-02-10T09:18:57.966+0000] {standard_task_runner.py:105} INFO - Job 492: Subtask run_pre_check
+[2025-02-10T09:18:58.002+0000] {task_command.py:467} INFO - Running <TaskInstance: cluster_deployment.run_pre_check manual__2025-02-10T09:18:23.744625+00:00 [running]> on host fbc98e9fe6bb
+[2025-02-10T09:18:58.058+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='cluster_deployment' AIRFLOW_CTX_TASK_ID='run_pre_check' AIRFLOW_CTX_EXECUTION_DATE='2025-02-10T09:18:23.744625+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-10T09:18:23.744625+00:00'
+[2025-02-10T09:18:58.059+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-10T09:18:58.059+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-10T09:18:58.060+0000] {logging_mixin.py:190} INFO - Current task name:run_pre_check state:running start_date:2025-02-10 09:18:57.931994+00:00
+[2025-02-10T09:18:58.060+0000] {logging_mixin.py:190} INFO - Dag name:cluster_deployment and current dag run status:running
+[2025-02-10T09:18:58.060+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-10T09:18:58.061+0000] {baseoperator.py:421} WARNING - PythonVirtualenvOperator.execute cannot be called outside TaskInstance!
+[2025-02-10T09:18:58.064+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvile8_28m --system-site-packages --python=python
+[2025-02-10T09:18:58.068+0000] {process_utils.py:190} INFO - Output:
+[2025-02-10T09:18:58.746+0000] {process_utils.py:194} INFO - created virtual environment CPython3.12.8.final.0-64 in 229ms
+[2025-02-10T09:18:58.747+0000] {process_utils.py:194} INFO -   creator CPython3Posix(dest=/tmp/venvile8_28m, clear=False, no_vcs_ignore=False, global=True)
+[2025-02-10T09:18:58.748+0000] {process_utils.py:194} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2025-02-10T09:18:58.748+0000] {process_utils.py:194} INFO -     added seed packages: pip==24.3.1
+[2025-02-10T09:18:58.749+0000] {process_utils.py:194} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2025-02-10T09:18:58.770+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvile8_28m/bin/pip install -r /tmp/venvile8_28m/requirements.txt
+[2025-02-10T09:18:58.772+0000] {process_utils.py:190} INFO - Output:
+[2025-02-10T09:18:59.879+0000] {process_utils.py:194} INFO - Requirement already satisfied: pandas==2.1.4 in /home/***/.local/lib/python3.12/site-packages (from -r /tmp/venvile8_28m/requirements.txt (line 1)) (2.1.4)
+[2025-02-10T09:18:59.884+0000] {process_utils.py:194} INFO - Requirement already satisfied: numpy<2,>=1.26.0 in /home/***/.local/lib/python3.12/site-packages (from pandas==2.1.4->-r /tmp/venvile8_28m/requirements.txt (line 1)) (1.26.4)
+[2025-02-10T09:18:59.884+0000] {process_utils.py:194} INFO - Requirement already satisfied: python-dateutil>=2.8.2 in /home/***/.local/lib/python3.12/site-packages (from pandas==2.1.4->-r /tmp/venvile8_28m/requirements.txt (line 1)) (2.9.0.post0)
+[2025-02-10T09:18:59.885+0000] {process_utils.py:194} INFO - Requirement already satisfied: pytz>=2020.1 in /home/***/.local/lib/python3.12/site-packages (from pandas==2.1.4->-r /tmp/venvile8_28m/requirements.txt (line 1)) (2024.2)
+[2025-02-10T09:18:59.885+0000] {process_utils.py:194} INFO - Requirement already satisfied: tzdata>=2022.1 in /home/***/.local/lib/python3.12/site-packages (from pandas==2.1.4->-r /tmp/venvile8_28m/requirements.txt (line 1)) (2024.2)
+[2025-02-10T09:18:59.888+0000] {process_utils.py:194} INFO - Requirement already satisfied: six>=1.5 in /home/***/.local/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas==2.1.4->-r /tmp/venvile8_28m/requirements.txt (line 1)) (1.17.0)
+[2025-02-10T09:19:00.301+0000] {process_utils.py:194} INFO - 
+[2025-02-10T09:19:00.302+0000] {process_utils.py:194} INFO - [notice] A new release of pip is available: 24.3.1 -> 25.0.1
+[2025-02-10T09:19:00.302+0000] {process_utils.py:194} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2025-02-10T09:19:00.377+0000] {python.py:513} INFO - Use 'pickle' as serializer.
+[2025-02-10T09:19:00.407+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvile8_28m/bin/python /tmp/venv-calljaoepzjn/script.py /tmp/venv-calljaoepzjn/script.in /tmp/venv-calljaoepzjn/script.out /tmp/venv-calljaoepzjn/string_args.txt /tmp/venv-calljaoepzjn/termination.log
+[2025-02-10T09:19:00.409+0000] {process_utils.py:190} INFO - Output:
+[2025-02-10T09:19:04.895+0000] {process_utils.py:194} INFO - [2025-02-10T09:19:04.894+0000] {script.py:23} INFO - Starting run pre-checks...
+[2025-02-10T09:19:04.900+0000] {process_utils.py:194} INFO - [2025-02-10T09:19:04.894+0000] {script.py:26} INFO - Pre Deployment Report: {'services_status': {'running': 4}, 'deployment_ready': True, 'timestamp': '2025-02-10T09:18:35.562022'}
+[2025-02-10T09:19:04.902+0000] {process_utils.py:194} INFO - [2025-02-10T09:19:04.898+0000] {script.py:41} INFO - Pre-checks completed:
+[2025-02-10T09:19:04.902+0000] {process_utils.py:194} INFO - Total memory usage: 1536%
+[2025-02-10T09:19:04.902+0000] {process_utils.py:194} INFO - Status: PASS
+[2025-02-10T09:19:05.341+0000] {python.py:240} INFO - Done. Returned value was: {'total_memory_usage_mb': 1536, 'checks_passed': True, 'timestamp': '2025-02-10T09:19:04.898020'}
+[2025-02-10T09:19:05.386+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-10T09:19:05.387+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=cluster_deployment, task_id=run_pre_check, run_id=manual__2025-02-10T09:18:23.744625+00:00, execution_date=20250210T091823, start_date=20250210T091857, end_date=20250210T091905
+[2025-02-10T09:19:05.398+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-10T09:19:05.399+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-10T09:19:05.399+0000] {logging_mixin.py:190} INFO - Dag name:cluster_deployment queued_at:2025-02-10 09:18:23.797582+00:00
+[2025-02-10T09:19:05.399+0000] {logging_mixin.py:190} INFO - Task hostname:fbc98e9fe6bb operator:PythonVirtualenvOperator
+[2025-02-10T09:19:05.436+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-10T09:19:05.494+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-10T09:19:05.496+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

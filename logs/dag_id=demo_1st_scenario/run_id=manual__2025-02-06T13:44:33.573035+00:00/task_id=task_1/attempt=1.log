@@ -1,0 +1,65 @@
+[2025-02-06T13:44:37.502+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-06T13:44:37.512+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: demo_1st_scenario.task_1 manual__2025-02-06T13:44:33.573035+00:00 [queued]>
+[2025-02-06T13:44:37.517+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: demo_1st_scenario.task_1 manual__2025-02-06T13:44:33.573035+00:00 [queued]>
+[2025-02-06T13:44:37.518+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-06T13:44:37.526+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonVirtualenvOperator): task_1> on 2025-02-06 13:44:33.573035+00:00
+[2025-02-06T13:44:37.536+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2961) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-06T13:44:37.538+0000] {standard_task_runner.py:72} INFO - Started process 2962 to run task
+[2025-02-06T13:44:37.538+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'demo_1st_scenario', 'task_1', 'manual__2025-02-06T13:44:33.573035+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/demo_1st_scenario.py', '--cfg-path', '/tmp/tmpc3w19vod']
+[2025-02-06T13:44:37.539+0000] {standard_task_runner.py:105} INFO - Job 36: Subtask task_1
+[2025-02-06T13:44:37.577+0000] {task_command.py:467} INFO - Running <TaskInstance: demo_1st_scenario.task_1 manual__2025-02-06T13:44:33.573035+00:00 [running]> on host ***-worker-2
+[2025-02-06T13:44:37.631+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='demo_1st_scenario' AIRFLOW_CTX_TASK_ID='task_1' AIRFLOW_CTX_EXECUTION_DATE='2025-02-06T13:44:33.573035+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-06T13:44:33.573035+00:00'
+[2025-02-06T13:44:37.632+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-06T13:44:37.633+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-06T13:44:37.634+0000] {logging_mixin.py:190} INFO - Current task name:task_1 state:running start_date:2025-02-06 13:44:37.513456+00:00
+[2025-02-06T13:44:37.634+0000] {logging_mixin.py:190} INFO - Dag name:demo_1st_scenario and current dag run status:running
+[2025-02-06T13:44:37.634+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-06T13:44:37.635+0000] {baseoperator.py:421} WARNING - PythonVirtualenvOperator.execute cannot be called outside TaskInstance!
+[2025-02-06T13:44:37.637+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvhg48k5ih --python=python
+[2025-02-06T13:44:37.638+0000] {process_utils.py:190} INFO - Output:
+[2025-02-06T13:44:38.621+0000] {process_utils.py:194} INFO - created virtual environment CPython3.12.8.final.0-64 in 498ms
+[2025-02-06T13:44:38.622+0000] {process_utils.py:194} INFO -   creator CPython3Posix(dest=/tmp/venvhg48k5ih, clear=False, no_vcs_ignore=False, global=False)
+[2025-02-06T13:44:38.622+0000] {process_utils.py:194} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2025-02-06T13:44:38.623+0000] {process_utils.py:194} INFO -     added seed packages: pip==24.3.1
+[2025-02-06T13:44:38.623+0000] {process_utils.py:194} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2025-02-06T13:44:38.659+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvhg48k5ih/bin/pip install -r /tmp/venvhg48k5ih/requirements.txt
+[2025-02-06T13:44:38.660+0000] {process_utils.py:190} INFO - Output:
+[2025-02-06T13:44:40.049+0000] {process_utils.py:194} INFO - Collecting pandas==2.1.4 (from -r /tmp/venvhg48k5ih/requirements.txt (line 1))
+[2025-02-06T13:44:40.191+0000] {process_utils.py:194} INFO -   Downloading pandas-2.1.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (18 kB)
+[2025-02-06T13:44:40.437+0000] {process_utils.py:194} INFO - Collecting numpy<2,>=1.26.0 (from pandas==2.1.4->-r /tmp/venvhg48k5ih/requirements.txt (line 1))
+[2025-02-06T13:44:40.469+0000] {process_utils.py:194} INFO -   Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (62 kB)
+[2025-02-06T13:44:40.573+0000] {process_utils.py:194} INFO - Collecting python-dateutil>=2.8.2 (from pandas==2.1.4->-r /tmp/venvhg48k5ih/requirements.txt (line 1))
+[2025-02-06T13:44:40.604+0000] {process_utils.py:194} INFO -   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2025-02-06T13:44:40.682+0000] {process_utils.py:194} INFO - Collecting pytz>=2020.1 (from pandas==2.1.4->-r /tmp/venvhg48k5ih/requirements.txt (line 1))
+[2025-02-06T13:44:40.714+0000] {process_utils.py:194} INFO -   Downloading pytz-2025.1-py2.py3-none-any.whl.metadata (22 kB)
+[2025-02-06T13:44:40.771+0000] {process_utils.py:194} INFO - Collecting tzdata>=2022.1 (from pandas==2.1.4->-r /tmp/venvhg48k5ih/requirements.txt (line 1))
+[2025-02-06T13:44:40.802+0000] {process_utils.py:194} INFO -   Downloading tzdata-2025.1-py2.py3-none-any.whl.metadata (1.4 kB)
+[2025-02-06T13:44:40.859+0000] {process_utils.py:194} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas==2.1.4->-r /tmp/venvhg48k5ih/requirements.txt (line 1))
+[2025-02-06T13:44:40.889+0000] {process_utils.py:194} INFO -   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+[2025-02-06T13:44:40.926+0000] {process_utils.py:194} INFO - Downloading pandas-2.1.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (14.3 MB)
+[2025-02-06T13:44:41.281+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.3/14.3 MB 47.0 MB/s eta 0:00:00
+[2025-02-06T13:44:41.316+0000] {process_utils.py:194} INFO - Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.9 MB)
+[2025-02-06T13:44:41.595+0000] {process_utils.py:194} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.9/13.9 MB 49.8 MB/s eta 0:00:00
+[2025-02-06T13:44:41.626+0000] {process_utils.py:194} INFO - Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2025-02-06T13:44:41.665+0000] {process_utils.py:194} INFO - Downloading pytz-2025.1-py2.py3-none-any.whl (507 kB)
+[2025-02-06T13:44:41.708+0000] {process_utils.py:194} INFO - Downloading tzdata-2025.1-py2.py3-none-any.whl (346 kB)
+[2025-02-06T13:44:41.747+0000] {process_utils.py:194} INFO - Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+[2025-02-06T13:44:41.824+0000] {process_utils.py:194} INFO - Installing collected packages: pytz, tzdata, six, numpy, python-dateutil, pandas
+[2025-02-06T13:44:47.782+0000] {process_utils.py:194} INFO - Successfully installed numpy-1.26.4 pandas-2.1.4 python-dateutil-2.9.0.post0 pytz-2025.1 six-1.17.0 tzdata-2025.1
+[2025-02-06T13:44:47.970+0000] {process_utils.py:194} INFO - 
+[2025-02-06T13:44:47.971+0000] {process_utils.py:194} INFO - [notice] A new release of pip is available: 24.3.1 -> 25.0
+[2025-02-06T13:44:47.972+0000] {process_utils.py:194} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2025-02-06T13:44:48.098+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvhg48k5ih/bin/python /tmp/venv-callt9ae258_/script.py /tmp/venv-callt9ae258_/script.in /tmp/venv-callt9ae258_/script.out /tmp/venv-callt9ae258_/string_args.txt /tmp/venv-callt9ae258_/termination.log
+[2025-02-06T13:44:48.100+0000] {process_utils.py:190} INFO - Output:
+[2025-02-06T13:44:48.804+0000] {python.py:240} INFO - Done. Returned value was: {"age":{"London":25.0,"New York":30.0,"Paris":35.0}}
+[2025-02-06T13:44:48.835+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-06T13:44:48.836+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=demo_1st_scenario, task_id=task_1, run_id=manual__2025-02-06T13:44:33.573035+00:00, execution_date=20250206T134433, start_date=20250206T134437, end_date=20250206T134448
+[2025-02-06T13:44:48.850+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-06T13:44:48.851+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-06T13:44:48.851+0000] {logging_mixin.py:190} INFO - Dag name:demo_1st_scenario queued_at:2025-02-06 13:44:33.610544+00:00
+[2025-02-06T13:44:48.852+0000] {logging_mixin.py:190} INFO - Task hostname:***-worker-2 operator:PythonVirtualenvOperator
+[2025-02-06T13:44:48.882+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-06T13:44:48.908+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-06T13:44:48.909+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

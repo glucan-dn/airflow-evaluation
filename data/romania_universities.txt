@@ -1,0 +1,747 @@
+[
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.aistedaab.ro/"
+    ],
+    "domains": [
+      "aistedaab.ro"
+    ],
+    "name": "AISTEDA"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.amgd.eu/"
+    ],
+    "domains": [
+      "amgd.eu"
+    ],
+    "name": "Academy of Music \"Georghe Dima\" Cluj-Napoca"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.anefs-edu.ro/"
+    ],
+    "domains": [
+      "anefs-edu.ro"
+    ],
+    "name": "National Academy for Physical Education and Sports Bucharest"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.arteiasi.ro/"
+    ],
+    "domains": [
+      "arteiasi.ro"
+    ],
+    "name": "Academy of Arts \"George Enescu\" Iasi"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.ase.ro/"
+    ],
+    "domains": [
+      "ase.ro"
+    ],
+    "name": "Academia de Studii Economice din Bucuresti"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.central.ucv.ro/"
+    ],
+    "domains": [
+      "central.ucv.ro"
+    ],
+    "name": "University of Craiova"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.emanuel.ro/"
+    ],
+    "domains": [
+      "emanuel.ro"
+    ],
+    "name": "Emanuel University"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.iaim.ro/"
+    ],
+    "domains": [
+      "iaim.ro"
+    ],
+    "name": "Institute of Architecture \"Ion Mincu\" Bucharest"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.mta.ro/"
+    ],
+    "domains": [
+      "mta.ro"
+    ],
+    "name": "Academia Tehnica Militara"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.oradeauniversity.com/"
+    ],
+    "domains": [
+      "oradeauniversity.com"
+    ],
+    "name": "University of Medicine and Pharmacology of Oradea"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.oradeauniversity.com"
+    ],
+    "domains": [
+      "oradeauniversity.co"
+    ],
+    "name": "Oradea University"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.ovidunivconstanta-edu.org/"
+    ],
+    "domains": [
+      "ovidunivconstanta-edu.org"
+    ],
+    "name": "University of Constanta Medical School"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.pub.ro/"
+    ],
+    "domains": [
+      "pub.ro"
+    ],
+    "name": "University Politehnica of Bucharest"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.rau.ro/"
+    ],
+    "domains": [
+      "rau.ro"
+    ],
+    "name": "Romanian-American University"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.sibiu.ro/"
+    ],
+    "domains": [
+      "sibiu.ro"
+    ],
+    "name": "University of Sibiu"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.snspa.ro/"
+    ],
+    "domains": [
+      "snspa.ro"
+    ],
+    "name": "National School of Political and Administrative Studies Bucharest"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.spiruharet.ro/"
+    ],
+    "domains": [
+      "spiruharet.ro"
+    ],
+    "name": "Spiru Haret University"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.tuiasi.ro/"
+    ],
+    "domains": [
+      "tuiasi.ro"
+    ],
+    "name": "Technical University of Iasi"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.uab.ro/"
+    ],
+    "domains": [
+      "uab.ro"
+    ],
+    "name": "1 December University of Alba Iulia"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.uaic.ro/"
+    ],
+    "domains": [
+      "uaic.ro"
+    ],
+    "name": "University of Iasi"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.uartdcluj.ro/"
+    ],
+    "domains": [
+      "uartdcluj.ro"
+    ],
+    "name": "University of Art and Design Cluj-Napoca"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.uat.ro/"
+    ],
+    "domains": [
+      "uat.ro"
+    ],
+    "name": "Targu-Mures University of Theatre"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.uav.ro/"
+    ],
+    "domains": [
+      "uav.ro"
+    ],
+    "name": "University \"Aurel Vlaicu\" Arad"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.ubbcluj.ro/"
+    ],
+    "domains": [
+      "ubbcluj.ro"
+    ],
+    "name": "Babes-Bolyai University of Cluj-Napoca"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.ubm.ro/"
+    ],
+    "domains": [
+      "ubm.ro"
+    ],
+    "name": "North University of Baia Mare"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.ub.ro/"
+    ],
+    "domains": [
+      "ub.ro"
+    ],
+    "name": "University of Bacau"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.uem.ro/"
+    ],
+    "domains": [
+      "uem.ro"
+    ],
+    "name": "University of Resita"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.ugal.ro/"
+    ],
+    "domains": [
+      "ugal.ro"
+    ],
+    "name": "University of Galatzi"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.ulbsibiu.ro/"
+    ],
+    "domains": [
+      "ulbsibiu.ro"
+    ],
+    "name": "University Lucian Blaga of Sibiu"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.umfcluj.ro/"
+    ],
+    "domains": [
+      "umfcluj.ro"
+    ],
+    "name": "University of Medicine and Pharmacy of Cluj-Napoca"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.umfiasi.ro/"
+    ],
+    "domains": [
+      "umfiasi.ro"
+    ],
+    "name": "University of Medicine and Pharmacy of Iasi"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.umftgm.ro/"
+    ],
+    "domains": [
+      "umftgm.ro"
+    ],
+    "name": "University of Medicine and Pharmacy of Targu Mures"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.umft.ro/"
+    ],
+    "domains": [
+      "umft.ro"
+    ],
+    "name": "University of Medicine and Pharmacy of Timisoara"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.unarte.ro/"
+    ],
+    "domains": [
+      "unarte.ro"
+    ],
+    "name": "National University of Arts"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.unatc.ro/"
+    ],
+    "domains": [
+      "unatc.ro"
+    ],
+    "name": "National University of Theater and Film Arts"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.unibuc.ro/"
+    ],
+    "domains": [
+      "unibuc.ro"
+    ],
+    "name": "University of Bucharest"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.unitbv.ro/"
+    ],
+    "domains": [
+      "unitbv.ro"
+    ],
+    "name": "University \"Transilvany\" of Brasov"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.univagro-iasi.ro/"
+    ],
+    "domains": [
+      "univagro-iasi.ro"
+    ],
+    "name": "University of Agriculture and Veterinary Medicine Iasi"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.univcb.ro/"
+    ],
+    "domains": [
+      "univcb.ro"
+    ],
+    "name": "Constantin Brancoveanu University Pitesti"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.univermed-cdgm.ro/"
+    ],
+    "domains": [
+      "univermed-cdgm.ro"
+    ],
+    "name": "University of Medicine and Pharmacy of Bucharest"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.universitateamaritima.ro/"
+    ],
+    "domains": [
+      "universitateamaritima.ro"
+    ],
+    "name": "Maritime University Constanta"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.univ-ovidius.ro/"
+    ],
+    "domains": [
+      "univ-ovidius.ro"
+    ],
+    "name": "University of Constanta"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.unmb.ro/"
+    ],
+    "domains": [
+      "unmb.ro"
+    ],
+    "name": "National University of Music"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.uoradea.ro/"
+    ],
+    "domains": [
+      "uoradea.ro"
+    ],
+    "name": "University of Oradea"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.upa.ro/"
+    ],
+    "domains": [
+      "upa.ro"
+    ],
+    "name": "University \"Petre Andrei\" Iasi"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.upet.ro/"
+    ],
+    "domains": [
+      "upet.ro"
+    ],
+    "name": "University of Petrosani"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.upg-ploiesti.ro/"
+    ],
+    "domains": [
+      "upg-ploiesti.ro"
+    ],
+    "name": "University Oil- Gas Ploiesti"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.upit.ro/"
+    ],
+    "domains": [
+      "upit.ro"
+    ],
+    "name": "University of Pitesti"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.upm.ro/"
+    ],
+    "domains": [
+      "upm.ro"
+    ],
+    "name": "Petru Maior University of Targu Mures"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.usab.ro/"
+    ],
+    "domains": [
+      "usab.ro"
+    ],
+    "name": "University of Agriculture and Veterinary Medicine Bucharest"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.usab-tm.ro/"
+    ],
+    "domains": [
+      "usab-tm.ro"
+    ],
+    "name": "University of Agriculture and Veterinary Medicine Timisoara"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.usamvcluj.ro/"
+    ],
+    "domains": [
+      "usamvcluj.ro"
+    ],
+    "name": "University of Agriculture and Veterinary Medicine Cluj-Napoca"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.usv.ro/"
+    ],
+    "domains": [
+      "usv.ro"
+    ],
+    "name": "University of Suceava"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.utcb.ro/"
+    ],
+    "domains": [
+      "utcb.ro"
+    ],
+    "name": "Technical University of Civil Engineering Bucharest"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.utcluj.ro/"
+    ],
+    "domains": [
+      "utcluj.ro"
+    ],
+    "name": "Technical University of Cluj-Napoca"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.utgjiu.ro/"
+    ],
+    "domains": [
+      "utgjiu.ro"
+    ],
+    "name": "University of Targu Jiu"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.utm.ro/"
+    ],
+    "domains": [
+      "utm.ro"
+    ],
+    "name": "University \"Titu Maiorescu\""
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.utt.ro/"
+    ],
+    "domains": [
+      "utt.ro"
+    ],
+    "name": "Technical University of Timisoara"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.uvt.ro/"
+    ],
+    "domains": [
+      "uvt.ro"
+    ],
+    "name": "West University of Timisoara"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.uvvg.ro/"
+    ],
+    "domains": [
+      "uvvg.ro"
+    ],
+    "name": "Universitatea de Vest \"Vasile Goldi\u015f\""
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "http://www.valahia.ro/"
+    ],
+    "domains": [
+      "valahia.ro"
+    ],
+    "name": "Valahia University of Targoviste"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "RO",
+    "country": "Romania",
+    "web_pages": [
+      "https://upt.ro"
+    ],
+    "domains": [
+      "student.upt.ro",
+      "upt.ro"
+    ],
+    "name": "Polytechnic University of Timisoara"
+  }
+]

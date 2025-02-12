@@ -1,0 +1,291 @@
+[2025-02-07T15:41:12.214+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-07T15:41:12.227+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [queued]>
+[2025-02-07T15:41:12.233+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [queued]>
+[2025-02-07T15:41:12.234+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-07T15:41:12.250+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_tests_to_run> on 2025-02-07 15:40:37.799884+00:00
+[2025-02-07T15:41:12.265+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1773) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-07T15:41:12.267+0000] {standard_task_runner.py:72} INFO - Started process 1774 to run task
+[2025-02-07T15:41:12.268+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'cluster_deployment_rollback', 'wait_for_tests_to_run', 'manual__2025-02-07T15:40:37.799884+00:00', '--job-id', '306', '--raw', '--subdir', 'DAGS_FOLDER/cluster_deployment_rollback.py', '--cfg-path', '/tmp/tmpg05u2oyx']
+[2025-02-07T15:41:12.269+0000] {standard_task_runner.py:105} INFO - Job 306: Subtask wait_for_tests_to_run
+[2025-02-07T15:41:12.320+0000] {task_command.py:467} INFO - Running <TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [running]> on host 35f5723d0861
+[2025-02-07T15:41:12.364+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='cluster_deployment_rollback' AIRFLOW_CTX_TASK_ID='wait_for_tests_to_run' AIRFLOW_CTX_EXECUTION_DATE='2025-02-07T15:40:37.799884+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-07T15:40:37.799884+00:00'
+[2025-02-07T15:41:12.366+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-07T15:41:12.366+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-07T15:41:12.366+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_tests_to_run state:running start_date:2025-02-07 15:41:12.227589+00:00
+[2025-02-07T15:41:12.367+0000] {logging_mixin.py:190} INFO - Dag name:cluster_deployment_rollback and current dag run status:running
+[2025-02-07T15:41:12.367+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-07T15:41:12.367+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-07T15:41:12.381+0000] {external_task.py:258} INFO - Poking for tasks ['tests_finished'] in dag run_e2e_tests on 2025-02-07T15:40:38.799884+00:00 ... 
+[2025-02-07T15:41:12.381+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-07T15:41:12.397+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-07T15:41:12.398+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-07T15:41:12.404+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-07T15:41:12.432+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-07T15:41:12.433+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-07T15:41:18.908+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-07T15:41:18.916+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [queued]>
+[2025-02-07T15:41:18.921+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [queued]>
+[2025-02-07T15:41:18.921+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-07T15:41:18.927+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_tests_to_run> on 2025-02-07 15:40:37.799884+00:00
+[2025-02-07T15:41:18.934+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1776) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-07T15:41:18.936+0000] {standard_task_runner.py:72} INFO - Started process 1777 to run task
+[2025-02-07T15:41:18.936+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'cluster_deployment_rollback', 'wait_for_tests_to_run', 'manual__2025-02-07T15:40:37.799884+00:00', '--job-id', '307', '--raw', '--subdir', 'DAGS_FOLDER/cluster_deployment_rollback.py', '--cfg-path', '/tmp/tmp4fi1_91t']
+[2025-02-07T15:41:18.937+0000] {standard_task_runner.py:105} INFO - Job 307: Subtask wait_for_tests_to_run
+[2025-02-07T15:41:18.971+0000] {task_command.py:467} INFO - Running <TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [running]> on host 35f5723d0861
+[2025-02-07T15:41:19.006+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='cluster_deployment_rollback' AIRFLOW_CTX_TASK_ID='wait_for_tests_to_run' AIRFLOW_CTX_EXECUTION_DATE='2025-02-07T15:40:37.799884+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-07T15:40:37.799884+00:00'
+[2025-02-07T15:41:19.008+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-07T15:41:19.008+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-07T15:41:19.008+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_tests_to_run state:running start_date:2025-02-07 15:41:18.917505+00:00
+[2025-02-07T15:41:19.009+0000] {logging_mixin.py:190} INFO - Dag name:cluster_deployment_rollback and current dag run status:running
+[2025-02-07T15:41:19.009+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-07T15:41:19.010+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-07T15:41:19.022+0000] {external_task.py:258} INFO - Poking for tasks ['tests_finished'] in dag run_e2e_tests on 2025-02-07T15:40:38.799884+00:00 ... 
+[2025-02-07T15:41:19.022+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-07T15:41:19.038+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-07T15:41:19.038+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-07T15:41:19.070+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-07T15:41:19.085+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-07T15:41:19.086+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-07T15:41:26.170+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-07T15:41:26.179+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [queued]>
+[2025-02-07T15:41:26.183+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [queued]>
+[2025-02-07T15:41:26.183+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-07T15:41:26.190+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_tests_to_run> on 2025-02-07 15:40:37.799884+00:00
+[2025-02-07T15:41:26.196+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=738) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-07T15:41:26.197+0000] {standard_task_runner.py:72} INFO - Started process 739 to run task
+[2025-02-07T15:41:26.198+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'cluster_deployment_rollback', 'wait_for_tests_to_run', 'manual__2025-02-07T15:40:37.799884+00:00', '--job-id', '308', '--raw', '--subdir', 'DAGS_FOLDER/cluster_deployment_rollback.py', '--cfg-path', '/tmp/tmpene0exld']
+[2025-02-07T15:41:26.198+0000] {standard_task_runner.py:105} INFO - Job 308: Subtask wait_for_tests_to_run
+[2025-02-07T15:41:26.231+0000] {task_command.py:467} INFO - Running <TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [running]> on host 1999c8c59930
+[2025-02-07T15:41:26.268+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='cluster_deployment_rollback' AIRFLOW_CTX_TASK_ID='wait_for_tests_to_run' AIRFLOW_CTX_EXECUTION_DATE='2025-02-07T15:40:37.799884+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-07T15:40:37.799884+00:00'
+[2025-02-07T15:41:26.269+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-07T15:41:26.270+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-07T15:41:26.270+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_tests_to_run state:running start_date:2025-02-07 15:41:26.179811+00:00
+[2025-02-07T15:41:26.270+0000] {logging_mixin.py:190} INFO - Dag name:cluster_deployment_rollback and current dag run status:running
+[2025-02-07T15:41:26.270+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-07T15:41:26.271+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-07T15:41:26.282+0000] {external_task.py:258} INFO - Poking for tasks ['tests_finished'] in dag run_e2e_tests on 2025-02-07T15:40:38.799884+00:00 ... 
+[2025-02-07T15:41:26.283+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-07T15:41:26.296+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-07T15:41:26.296+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-07T15:41:26.330+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-07T15:41:26.345+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-07T15:41:26.346+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-07T15:41:32.801+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-07T15:41:32.809+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [queued]>
+[2025-02-07T15:41:32.813+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [queued]>
+[2025-02-07T15:41:32.813+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-07T15:41:32.820+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_tests_to_run> on 2025-02-07 15:40:37.799884+00:00
+[2025-02-07T15:41:32.825+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1779) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-07T15:41:32.827+0000] {standard_task_runner.py:72} INFO - Started process 1780 to run task
+[2025-02-07T15:41:32.827+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'cluster_deployment_rollback', 'wait_for_tests_to_run', 'manual__2025-02-07T15:40:37.799884+00:00', '--job-id', '309', '--raw', '--subdir', 'DAGS_FOLDER/cluster_deployment_rollback.py', '--cfg-path', '/tmp/tmp2fhwjjno']
+[2025-02-07T15:41:32.828+0000] {standard_task_runner.py:105} INFO - Job 309: Subtask wait_for_tests_to_run
+[2025-02-07T15:41:32.869+0000] {task_command.py:467} INFO - Running <TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [running]> on host 35f5723d0861
+[2025-02-07T15:41:32.926+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='cluster_deployment_rollback' AIRFLOW_CTX_TASK_ID='wait_for_tests_to_run' AIRFLOW_CTX_EXECUTION_DATE='2025-02-07T15:40:37.799884+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-07T15:40:37.799884+00:00'
+[2025-02-07T15:41:32.927+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-07T15:41:32.927+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-07T15:41:32.927+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_tests_to_run state:running start_date:2025-02-07 15:41:32.810088+00:00
+[2025-02-07T15:41:32.928+0000] {logging_mixin.py:190} INFO - Dag name:cluster_deployment_rollback and current dag run status:running
+[2025-02-07T15:41:32.928+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-07T15:41:32.928+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-07T15:41:32.942+0000] {external_task.py:258} INFO - Poking for tasks ['tests_finished'] in dag run_e2e_tests on 2025-02-07T15:40:38.799884+00:00 ... 
+[2025-02-07T15:41:32.943+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-07T15:41:32.969+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-07T15:41:32.970+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-07T15:41:33.000+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-07T15:41:33.022+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-07T15:41:33.024+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-07T15:41:40.448+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-07T15:41:40.461+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [queued]>
+[2025-02-07T15:41:40.466+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [queued]>
+[2025-02-07T15:41:40.467+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-07T15:41:40.475+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_tests_to_run> on 2025-02-07 15:40:37.799884+00:00
+[2025-02-07T15:41:40.483+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=749) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-07T15:41:40.486+0000] {standard_task_runner.py:72} INFO - Started process 752 to run task
+[2025-02-07T15:41:40.487+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'cluster_deployment_rollback', 'wait_for_tests_to_run', 'manual__2025-02-07T15:40:37.799884+00:00', '--job-id', '310', '--raw', '--subdir', 'DAGS_FOLDER/cluster_deployment_rollback.py', '--cfg-path', '/tmp/tmp3w8zsjxn']
+[2025-02-07T15:41:40.493+0000] {standard_task_runner.py:105} INFO - Job 310: Subtask wait_for_tests_to_run
+[2025-02-07T15:41:40.542+0000] {task_command.py:467} INFO - Running <TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [running]> on host 1999c8c59930
+[2025-02-07T15:41:40.602+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='cluster_deployment_rollback' AIRFLOW_CTX_TASK_ID='wait_for_tests_to_run' AIRFLOW_CTX_EXECUTION_DATE='2025-02-07T15:40:37.799884+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-07T15:40:37.799884+00:00'
+[2025-02-07T15:41:40.603+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-07T15:41:40.604+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-07T15:41:40.604+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_tests_to_run state:running start_date:2025-02-07 15:41:40.461852+00:00
+[2025-02-07T15:41:40.604+0000] {logging_mixin.py:190} INFO - Dag name:cluster_deployment_rollback and current dag run status:running
+[2025-02-07T15:41:40.604+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-07T15:41:40.605+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-07T15:41:40.619+0000] {external_task.py:258} INFO - Poking for tasks ['tests_finished'] in dag run_e2e_tests on 2025-02-07T15:40:38.799884+00:00 ... 
+[2025-02-07T15:41:40.619+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-07T15:41:40.635+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-07T15:41:40.636+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-07T15:41:40.677+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-07T15:41:40.692+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-07T15:41:40.693+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-07T15:41:47.408+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-07T15:41:47.416+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [queued]>
+[2025-02-07T15:41:47.421+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [queued]>
+[2025-02-07T15:41:47.421+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-07T15:41:47.428+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_tests_to_run> on 2025-02-07 15:40:37.799884+00:00
+[2025-02-07T15:41:47.433+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=754) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-07T15:41:47.434+0000] {standard_task_runner.py:72} INFO - Started process 755 to run task
+[2025-02-07T15:41:47.435+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'cluster_deployment_rollback', 'wait_for_tests_to_run', 'manual__2025-02-07T15:40:37.799884+00:00', '--job-id', '311', '--raw', '--subdir', 'DAGS_FOLDER/cluster_deployment_rollback.py', '--cfg-path', '/tmp/tmpt80put2y']
+[2025-02-07T15:41:47.436+0000] {standard_task_runner.py:105} INFO - Job 311: Subtask wait_for_tests_to_run
+[2025-02-07T15:41:47.477+0000] {task_command.py:467} INFO - Running <TaskInstance: cluster_deployment_rollback.wait_for_tests_to_run manual__2025-02-07T15:40:37.799884+00:00 [running]> on host 1999c8c59930
+[2025-02-07T15:41:47.545+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='cluster_deployment_rollback' AIRFLOW_CTX_TASK_ID='wait_for_tests_to_run' AIRFLOW_CTX_EXECUTION_DATE='2025-02-07T15:40:37.799884+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-07T15:40:37.799884+00:00'
+[2025-02-07T15:41:47.546+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-07T15:41:47.547+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-07T15:41:47.547+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_tests_to_run state:running start_date:2025-02-07 15:41:47.417356+00:00
+[2025-02-07T15:41:47.547+0000] {logging_mixin.py:190} INFO - Dag name:cluster_deployment_rollback and current dag run status:running
+[2025-02-07T15:41:47.548+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-07T15:41:47.548+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-07T15:41:47.565+0000] {external_task.py:258} INFO - Poking for tasks ['tests_finished'] in dag run_e2e_tests on 2025-02-07T15:40:38.799884+00:00 ... 
+[2025-02-07T15:41:47.565+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-07T15:41:47.571+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 348, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 323, in execute
+    raise AirflowSensorTimeout(message)
+airflow.exceptions.AirflowSensorTimeout: Sensor has timed out; run duration of 35.23371 seconds exceeds the specified timeout of 30.0.
+[2025-02-07T15:41:47.578+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-02-07T15:41:47.579+0000] {logging_mixin.py:190} INFO - Task start:2025-02-07 15:41:47.417356+00:00 end:2025-02-07 15:41:47.578689+00:00 duration:0.161333
+[2025-02-07T15:41:47.580+0000] {logging_mixin.py:190} INFO - Task:<Task(ExternalTaskSensor): wait_for_tests_to_run> dag:<DAG: cluster_deployment_rollback> dagrun:<DagRun cluster_deployment_rollback @ 2025-02-07 15:40:37.799884+00:00: manual__2025-02-07T15:40:37.799884+00:00, state:running, queued_at: 2025-02-07 15:40:37.819961+00:00. externally triggered: True>
+[2025-02-07T15:41:47.581+0000] {logging_mixin.py:190} INFO - Failure caused by Sensor has timed out; run duration of 35.23371 seconds exceeds the specified timeout of 30.0.
+[2025-02-07T15:41:47.581+0000] {taskinstance.py:1225} INFO - Immediate failure requested. Marking task as FAILED. dag_id=cluster_deployment_rollback, task_id=wait_for_tests_to_run, run_id=manual__2025-02-07T15:40:37.799884+00:00, execution_date=20250207T154037, start_date=20250207T154147, end_date=20250207T154147
+[2025-02-07T15:41:47.581+0000] {taskinstance.py:1563} INFO - Executing callback at index 0: rollback_all_previous_tasks
+[2025-02-07T15:41:47.581+0000] {taskinstance.py:1567} ERROR - Error in callback at index 0: rollback_all_previous_tasks
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 348, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 323, in execute
+    raise AirflowSensorTimeout(message)
+airflow.exceptions.AirflowSensorTimeout: Sensor has timed out; run duration of 35.23371 seconds exceeds the specified timeout of 30.0.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 1565, in _run_finished_callback
+    callback(context)
+  File "/opt/airflow/dags/cluster_deployment_rollback.py", line 30, in rollback_all_previous_tasks
+    session = context["session"]
+              ~~~~~~~^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/context.py", line 396, in __getitem__
+    raise KeyError(key)
+KeyError: 'session'
+[2025-02-07T15:41:47.592+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-07T15:41:47.592+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 311 for task wait_for_tests_to_run (Sensor has timed out; run duration of 35.23371 seconds exceeds the specified timeout of 30.0.; 755)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 348, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 323, in execute
+    raise AirflowSensorTimeout(message)
+airflow.exceptions.AirflowSensorTimeout: Sensor has timed out; run duration of 35.23371 seconds exceeds the specified timeout of 30.0.
+[2025-02-07T15:41:47.611+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-07T15:41:47.630+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-07T15:41:47.632+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

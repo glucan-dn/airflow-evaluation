@@ -1,0 +1,341 @@
+[2025-02-05T15:14:08.692+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:14:08.701+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:14:08.705+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:14:08.705+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:14:08.833+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:13:45.388747+00:00
+[2025-02-05T15:14:08.842+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2744) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:14:08.844+0000] {standard_task_runner.py:72} INFO - Started process 2745 to run task
+[2025-02-05T15:14:08.845+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:13:45.388747+00:00', '--job-id', '127', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmp_ndjiy80']
+[2025-02-05T15:14:08.846+0000] {standard_task_runner.py:105} INFO - Job 127: Subtask wait_for_signal
+[2025-02-05T15:14:08.884+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [running]> on host ***-worker-1
+[2025-02-05T15:14:08.941+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:13:45.388747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:13:45.388747+00:00'
+[2025-02-05T15:14:08.942+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:14:08.942+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:14:08.942+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:14:08.702032+00:00
+[2025-02-05T15:14:08.942+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:14:08.943+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:14:08.943+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:14:08.956+0000] {external_task.py:258} INFO - Poking for tasks ['send_signal'] in dag signal_dag on 2025-02-05T15:13:46.388747+00:00 ... 
+[2025-02-05T15:14:08.957+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-05T15:14:08.973+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-05T15:14:08.974+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:14:09.020+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T15:14:09.043+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:14:09.044+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-05T15:15:11.329+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:15:11.338+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:15:11.342+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:15:11.342+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:15:11.463+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:13:45.388747+00:00
+[2025-02-05T15:15:11.483+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2768) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:15:11.485+0000] {standard_task_runner.py:72} INFO - Started process 2769 to run task
+[2025-02-05T15:15:11.485+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:13:45.388747+00:00', '--job-id', '128', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmpad0ne6mr']
+[2025-02-05T15:15:11.487+0000] {standard_task_runner.py:105} INFO - Job 128: Subtask wait_for_signal
+[2025-02-05T15:15:11.521+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [running]> on host ***-worker-2
+[2025-02-05T15:15:11.564+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:13:45.388747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:13:45.388747+00:00'
+[2025-02-05T15:15:11.565+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:15:11.565+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:15:11.566+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:15:11.338795+00:00
+[2025-02-05T15:15:11.566+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:15:11.567+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:15:11.568+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:15:11.580+0000] {external_task.py:258} INFO - Poking for tasks ['send_signal'] in dag signal_dag on 2025-02-05T15:13:46.388747+00:00 ... 
+[2025-02-05T15:15:11.581+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-05T15:15:11.597+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-05T15:15:11.598+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:15:11.620+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T15:15:11.635+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:15:11.637+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-05T15:16:13.439+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:16:13.446+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:16:13.451+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:16:13.451+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:16:13.554+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:13:45.388747+00:00
+[2025-02-05T15:16:13.559+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2766) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:16:13.561+0000] {standard_task_runner.py:72} INFO - Started process 2767 to run task
+[2025-02-05T15:16:13.562+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:13:45.388747+00:00', '--job-id', '129', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmphqdm3sko']
+[2025-02-05T15:16:13.564+0000] {standard_task_runner.py:105} INFO - Job 129: Subtask wait_for_signal
+[2025-02-05T15:16:13.618+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [running]> on host ***-worker-3
+[2025-02-05T15:16:13.691+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:13:45.388747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:13:45.388747+00:00'
+[2025-02-05T15:16:13.692+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:16:13.693+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:16:13.693+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:16:13.447258+00:00
+[2025-02-05T15:16:13.694+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:16:13.694+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:16:13.695+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:16:13.708+0000] {external_task.py:258} INFO - Poking for tasks ['send_signal'] in dag signal_dag on 2025-02-05T15:13:46.388747+00:00 ... 
+[2025-02-05T15:16:13.709+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-05T15:16:13.732+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-05T15:16:13.733+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:16:13.748+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T15:16:13.772+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:16:13.775+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-05T15:17:16.460+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:17:16.474+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:17:16.481+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:17:16.481+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:17:16.606+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:13:45.388747+00:00
+[2025-02-05T15:17:16.612+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2783) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:17:16.614+0000] {standard_task_runner.py:72} INFO - Started process 2784 to run task
+[2025-02-05T15:17:16.614+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:13:45.388747+00:00', '--job-id', '130', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmp81ggftef']
+[2025-02-05T15:17:16.615+0000] {standard_task_runner.py:105} INFO - Job 130: Subtask wait_for_signal
+[2025-02-05T15:17:16.666+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [running]> on host ***-worker-3
+[2025-02-05T15:17:16.734+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:13:45.388747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:13:45.388747+00:00'
+[2025-02-05T15:17:16.735+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:17:16.736+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:17:16.736+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:17:16.474505+00:00
+[2025-02-05T15:17:16.736+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:17:16.736+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:17:16.737+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:17:16.753+0000] {external_task.py:258} INFO - Poking for tasks ['send_signal'] in dag signal_dag on 2025-02-05T15:13:46.388747+00:00 ... 
+[2025-02-05T15:17:16.754+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-05T15:17:16.788+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-05T15:17:16.791+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:17:16.836+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T15:17:16.860+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:17:16.861+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-05T15:18:19.453+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:18:19.477+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:18:19.487+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:18:19.487+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:18:19.604+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:13:45.388747+00:00
+[2025-02-05T15:18:19.614+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:13:45.388747+00:00', '--job-id', '131', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmponwotj9e']
+[2025-02-05T15:18:19.616+0000] {standard_task_runner.py:105} INFO - Job 131: Subtask wait_for_signal
+[2025-02-05T15:18:19.615+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2800) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:18:19.618+0000] {standard_task_runner.py:72} INFO - Started process 2801 to run task
+[2025-02-05T15:18:19.674+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [running]> on host ***-worker-3
+[2025-02-05T15:18:19.735+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:13:45.388747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:13:45.388747+00:00'
+[2025-02-05T15:18:19.736+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:18:19.737+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:18:19.737+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:18:19.477875+00:00
+[2025-02-05T15:18:19.738+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:18:19.738+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:18:19.739+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:18:19.760+0000] {external_task.py:258} INFO - Poking for tasks ['send_signal'] in dag signal_dag on 2025-02-05T15:13:46.388747+00:00 ... 
+[2025-02-05T15:18:19.762+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-05T15:18:19.816+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-05T15:18:19.816+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:18:19.841+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T15:18:19.866+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:18:19.867+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-05T15:19:22.357+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:19:22.367+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:19:22.372+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:19:22.373+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:19:22.484+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:13:45.388747+00:00
+[2025-02-05T15:19:22.490+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2816) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:19:22.491+0000] {standard_task_runner.py:72} INFO - Started process 2817 to run task
+[2025-02-05T15:19:22.492+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:13:45.388747+00:00', '--job-id', '132', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmponrm40sm']
+[2025-02-05T15:19:22.493+0000] {standard_task_runner.py:105} INFO - Job 132: Subtask wait_for_signal
+[2025-02-05T15:19:22.522+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [running]> on host ***-worker-3
+[2025-02-05T15:19:22.562+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:13:45.388747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:13:45.388747+00:00'
+[2025-02-05T15:19:22.563+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:19:22.563+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:19:22.564+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:19:22.368301+00:00
+[2025-02-05T15:19:22.564+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:19:22.564+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:19:22.565+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:19:22.577+0000] {external_task.py:258} INFO - Poking for tasks ['send_signal'] in dag signal_dag on 2025-02-05T15:13:46.388747+00:00 ... 
+[2025-02-05T15:19:22.578+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-05T15:19:22.593+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-05T15:19:22.593+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:19:22.625+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T15:19:22.639+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:19:22.641+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-05T15:20:24.602+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:20:24.616+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:20:24.623+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:20:24.624+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:20:24.750+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:13:45.388747+00:00
+[2025-02-05T15:20:24.761+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2833) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:20:24.765+0000] {standard_task_runner.py:72} INFO - Started process 2834 to run task
+[2025-02-05T15:20:24.767+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:13:45.388747+00:00', '--job-id', '133', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmp_2jh2qfr']
+[2025-02-05T15:20:24.768+0000] {standard_task_runner.py:105} INFO - Job 133: Subtask wait_for_signal
+[2025-02-05T15:20:24.829+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [running]> on host ***-worker-3
+[2025-02-05T15:20:24.883+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:13:45.388747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:13:45.388747+00:00'
+[2025-02-05T15:20:24.884+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:20:24.884+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:20:24.885+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:20:24.616848+00:00
+[2025-02-05T15:20:24.885+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:20:24.886+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:20:24.887+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:20:24.904+0000] {external_task.py:258} INFO - Poking for tasks ['send_signal'] in dag signal_dag on 2025-02-05T15:13:46.388747+00:00 ... 
+[2025-02-05T15:20:24.906+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-05T15:20:24.930+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-05T15:20:24.930+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:20:24.943+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T15:20:24.959+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:20:24.960+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-05T15:21:27.213+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:21:27.226+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:21:27.231+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:21:27.232+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:21:27.345+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:13:45.388747+00:00
+[2025-02-05T15:21:27.351+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2855) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:21:27.353+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:13:45.388747+00:00', '--job-id', '134', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmpklg5j8tf']
+[2025-02-05T15:21:27.354+0000] {standard_task_runner.py:72} INFO - Started process 2856 to run task
+[2025-02-05T15:21:27.354+0000] {standard_task_runner.py:105} INFO - Job 134: Subtask wait_for_signal
+[2025-02-05T15:21:27.393+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [running]> on host ***-worker-2
+[2025-02-05T15:21:27.442+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:13:45.388747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:13:45.388747+00:00'
+[2025-02-05T15:21:27.443+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:21:27.444+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:21:27.444+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:21:27.226554+00:00
+[2025-02-05T15:21:27.445+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:21:27.445+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:21:27.446+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:21:27.467+0000] {external_task.py:258} INFO - Poking for tasks ['send_signal'] in dag signal_dag on 2025-02-05T15:13:46.388747+00:00 ... 
+[2025-02-05T15:21:27.468+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-05T15:21:27.495+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-05T15:21:27.495+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:21:27.531+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T15:21:27.551+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:21:27.552+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-05T15:22:29.242+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:22:29.276+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:22:29.282+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:22:29.283+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:22:29.467+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:13:45.388747+00:00
+[2025-02-05T15:22:29.489+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2872) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:22:29.500+0000] {standard_task_runner.py:72} INFO - Started process 2873 to run task
+[2025-02-05T15:22:29.505+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:13:45.388747+00:00', '--job-id', '135', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmpnt6l2g4x']
+[2025-02-05T15:22:29.518+0000] {standard_task_runner.py:105} INFO - Job 135: Subtask wait_for_signal
+[2025-02-05T15:22:29.655+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [running]> on host ***-worker-2
+[2025-02-05T15:22:29.722+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:13:45.388747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:13:45.388747+00:00'
+[2025-02-05T15:22:29.723+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:22:29.723+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:22:29.724+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:22:29.277100+00:00
+[2025-02-05T15:22:29.724+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:22:29.724+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:22:29.725+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:22:29.744+0000] {external_task.py:258} INFO - Poking for tasks ['send_signal'] in dag signal_dag on 2025-02-05T15:13:46.388747+00:00 ... 
+[2025-02-05T15:22:29.746+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-05T15:22:29.782+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-05T15:22:29.783+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:22:29.807+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T15:22:29.829+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:22:29.831+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-05T15:23:31.517+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:23:31.526+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:23:31.530+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:23:31.530+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:23:31.622+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:13:45.388747+00:00
+[2025-02-05T15:23:31.629+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2865) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:23:31.632+0000] {standard_task_runner.py:72} INFO - Started process 2866 to run task
+[2025-02-05T15:23:31.632+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:13:45.388747+00:00', '--job-id', '136', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmpnm3be9ar']
+[2025-02-05T15:23:31.634+0000] {standard_task_runner.py:105} INFO - Job 136: Subtask wait_for_signal
+[2025-02-05T15:23:31.707+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [running]> on host ***-worker-1
+[2025-02-05T15:23:31.824+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:13:45.388747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:13:45.388747+00:00'
+[2025-02-05T15:23:31.827+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:23:31.828+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:23:31.828+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:23:31.527046+00:00
+[2025-02-05T15:23:31.828+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:23:31.830+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:23:31.830+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:23:31.855+0000] {external_task.py:258} INFO - Poking for tasks ['send_signal'] in dag signal_dag on 2025-02-05T15:13:46.388747+00:00 ... 
+[2025-02-05T15:23:31.856+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-05T15:23:31.875+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-05T15:23:31.876+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:23:31.901+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T15:23:31.917+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:23:31.919+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-05T15:24:34.443+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:24:34.458+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:24:34.465+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:24:34.466+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:24:34.591+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:13:45.388747+00:00
+[2025-02-05T15:24:34.601+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2903) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:24:34.602+0000] {standard_task_runner.py:72} INFO - Started process 2904 to run task
+[2025-02-05T15:24:34.602+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:13:45.388747+00:00', '--job-id', '137', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmpbjd6cirp']
+[2025-02-05T15:24:34.604+0000] {standard_task_runner.py:105} INFO - Job 137: Subtask wait_for_signal
+[2025-02-05T15:24:34.649+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [running]> on host ***-worker-2
+[2025-02-05T15:24:34.771+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:13:45.388747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:13:45.388747+00:00'
+[2025-02-05T15:24:34.778+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:24:34.779+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:24:34.780+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:24:34.458992+00:00
+[2025-02-05T15:24:34.782+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:24:34.782+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:24:34.784+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:24:34.823+0000] {external_task.py:258} INFO - Poking for tasks ['send_signal'] in dag signal_dag on 2025-02-05T15:13:46.388747+00:00 ... 
+[2025-02-05T15:24:34.826+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-05T15:24:34.861+0000] {taskinstance.py:309} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-02-05T15:24:34.862+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:24:34.900+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T15:24:34.930+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:24:34.931+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-05T15:25:37.030+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T15:25:37.039+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:25:37.043+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [queued]>
+[2025-02-05T15:25:37.043+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T15:25:37.142+0000] {taskinstance.py:2889} INFO - Executing <Task(ExternalTaskSensor): wait_for_signal> on 2025-02-05 15:13:45.388747+00:00
+[2025-02-05T15:25:37.148+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2896) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T15:25:37.150+0000] {standard_task_runner.py:72} INFO - Started process 2897 to run task
+[2025-02-05T15:25:37.150+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'wait_for_signal', 'manual__2025-02-05T15:13:45.388747+00:00', '--job-id', '139', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmpkdu25gdq']
+[2025-02-05T15:25:37.151+0000] {standard_task_runner.py:105} INFO - Job 139: Subtask wait_for_signal
+[2025-02-05T15:25:37.198+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.wait_for_signal manual__2025-02-05T15:13:45.388747+00:00 [running]> on host ***-worker-1
+[2025-02-05T15:25:37.270+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='wait_for_signal' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T15:13:45.388747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T15:13:45.388747+00:00'
+[2025-02-05T15:25:37.271+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T15:25:37.272+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T15:25:37.272+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_signal state:running start_date:2025-02-05 15:25:37.039634+00:00
+[2025-02-05T15:25:37.272+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T15:25:37.273+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T15:25:37.274+0000] {baseoperator.py:421} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-02-05T15:25:37.287+0000] {external_task.py:258} INFO - Poking for tasks ['send_signal'] in dag signal_dag on 2025-02-05T15:24:49.234472+00:00 ... 
+[2025-02-05T15:25:37.289+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97: DeprecationWarning: This method is deprecated and will be removed in future.
+  return func(*args, session=session, **kwargs)
+
+[2025-02-05T15:25:37.295+0000] {base.py:336} INFO - Success criteria met. Exiting.
+[2025-02-05T15:25:37.303+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T15:25:37.304+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=external_signal_workflow, task_id=wait_for_signal, run_id=manual__2025-02-05T15:13:45.388747+00:00, execution_date=20250205T151345, start_date=20250205T152537, end_date=20250205T152537
+[2025-02-05T15:25:37.310+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-05T15:25:37.310+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-05T15:25:37.310+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow queued_at:2025-02-05 15:13:45.414550+00:00
+[2025-02-05T15:25:37.311+0000] {logging_mixin.py:190} INFO - Task hostname:***-worker-1 operator:ExternalTaskSensor
+[2025-02-05T15:25:37.325+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T15:25:37.346+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T15:25:37.348+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

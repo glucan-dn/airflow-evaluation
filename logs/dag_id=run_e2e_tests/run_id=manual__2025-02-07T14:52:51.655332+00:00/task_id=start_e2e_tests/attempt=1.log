@@ -1,0 +1,32 @@
+[2025-02-07T14:52:53.555+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-07T14:52:53.568+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_e2e_tests.start_e2e_tests manual__2025-02-07T14:52:51.655332+00:00 [queued]>
+[2025-02-07T14:52:53.573+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_e2e_tests.start_e2e_tests manual__2025-02-07T14:52:51.655332+00:00 [queued]>
+[2025-02-07T14:52:53.574+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-07T14:52:53.583+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): start_e2e_tests> on 2025-02-07 14:52:51.655332+00:00
+[2025-02-07T14:52:53.588+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=560) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-07T14:52:53.589+0000] {standard_task_runner.py:72} INFO - Started process 563 to run task
+[2025-02-07T14:52:53.591+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'run_e2e_tests', 'start_e2e_tests', 'manual__2025-02-07T14:52:51.655332+00:00', '--job-id', '231', '--raw', '--subdir', 'DAGS_FOLDER/generate_dags_from_yaml.py', '--cfg-path', '/tmp/tmpziafp4vy']
+[2025-02-07T14:52:53.592+0000] {standard_task_runner.py:105} INFO - Job 231: Subtask start_e2e_tests
+[2025-02-07T14:52:53.648+0000] {task_command.py:467} INFO - Running <TaskInstance: run_e2e_tests.start_e2e_tests manual__2025-02-07T14:52:51.655332+00:00 [running]> on host 35f5723d0861
+[2025-02-07T14:52:53.723+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_e2e_tests' AIRFLOW_CTX_TASK_ID='start_e2e_tests' AIRFLOW_CTX_EXECUTION_DATE='2025-02-07T14:52:51.655332+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-07T14:52:51.655332+00:00'
+[2025-02-07T14:52:53.724+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-07T14:52:53.725+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-07T14:52:53.725+0000] {logging_mixin.py:190} INFO - Current task name:start_e2e_tests state:running start_date:2025-02-07 14:52:53.569112+00:00
+[2025-02-07T14:52:53.725+0000] {logging_mixin.py:190} INFO - Dag name:run_e2e_tests and current dag run status:running
+[2025-02-07T14:52:53.726+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-07T14:52:53.727+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-07T14:52:53.727+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', "echo 'Starting end-to-end tests...'; sleep 10; echo 'Tests ran successfully...'"]
+[2025-02-07T14:52:53.737+0000] {subprocess.py:99} INFO - Output:
+[2025-02-07T14:52:53.741+0000] {subprocess.py:106} INFO - Starting end-to-end tests...
+[2025-02-07T14:53:03.744+0000] {subprocess.py:106} INFO - Tests ran successfully...
+[2025-02-07T14:53:03.748+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-07T14:53:03.778+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-07T14:53:03.779+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=run_e2e_tests, task_id=start_e2e_tests, run_id=manual__2025-02-07T14:52:51.655332+00:00, execution_date=20250207T145251, start_date=20250207T145253, end_date=20250207T145303
+[2025-02-07T14:53:03.787+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-07T14:53:03.787+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-07T14:53:03.788+0000] {logging_mixin.py:190} INFO - Dag name:run_e2e_tests queued_at:2025-02-07 14:52:51.672164+00:00
+[2025-02-07T14:53:03.788+0000] {logging_mixin.py:190} INFO - Task hostname:35f5723d0861 operator:BashOperator
+[2025-02-07T14:53:03.825+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-07T14:53:03.835+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

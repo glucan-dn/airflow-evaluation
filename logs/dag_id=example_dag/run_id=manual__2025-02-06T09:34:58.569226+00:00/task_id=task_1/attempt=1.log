@@ -1,0 +1,32 @@
+[2025-02-06T09:35:03.727+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-06T09:35:03.745+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_dag.task_1 manual__2025-02-06T09:34:58.569226+00:00 [queued]>
+[2025-02-06T09:35:03.752+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_dag.task_1 manual__2025-02-06T09:34:58.569226+00:00 [queued]>
+[2025-02-06T09:35:03.753+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-06T09:35:03.762+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): task_1> on 2025-02-06 09:34:58.569226+00:00
+[2025-02-06T09:35:03.772+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=143) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-06T09:35:03.774+0000] {standard_task_runner.py:72} INFO - Started process 144 to run task
+[2025-02-06T09:35:03.775+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'example_dag', 'task_1', 'manual__2025-02-06T09:34:58.569226+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/generate_dags_from_yaml.py', '--cfg-path', '/tmp/tmpyoyh9q67']
+[2025-02-06T09:35:03.776+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask task_1
+[2025-02-06T09:35:03.877+0000] {task_command.py:467} INFO - Running <TaskInstance: example_dag.task_1 manual__2025-02-06T09:34:58.569226+00:00 [running]> on host ***-worker-2
+[2025-02-06T09:35:03.976+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_dag' AIRFLOW_CTX_TASK_ID='task_1' AIRFLOW_CTX_EXECUTION_DATE='2025-02-06T09:34:58.569226+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-06T09:34:58.569226+00:00'
+[2025-02-06T09:35:03.981+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-06T09:35:03.981+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-06T09:35:03.982+0000] {logging_mixin.py:190} INFO - Current task name:task_1 state:running start_date:2025-02-06 09:35:03.745856+00:00
+[2025-02-06T09:35:03.982+0000] {logging_mixin.py:190} INFO - Dag name:example_dag and current dag run status:running
+[2025-02-06T09:35:03.983+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-06T09:35:03.985+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-06T09:35:03.986+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', "echo 'Task 1 executed'"]
+[2025-02-06T09:35:03.994+0000] {subprocess.py:99} INFO - Output:
+[2025-02-06T09:35:03.998+0000] {subprocess.py:106} INFO - Task 1 executed
+[2025-02-06T09:35:03.999+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-06T09:35:04.035+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-06T09:35:04.036+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=example_dag, task_id=task_1, run_id=manual__2025-02-06T09:34:58.569226+00:00, execution_date=20250206T093458, start_date=20250206T093503, end_date=20250206T093504
+[2025-02-06T09:35:04.043+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-06T09:35:04.043+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-06T09:35:04.044+0000] {logging_mixin.py:190} INFO - Dag name:example_dag queued_at:2025-02-06 09:34:58.601042+00:00
+[2025-02-06T09:35:04.044+0000] {logging_mixin.py:190} INFO - Task hostname:***-worker-2 operator:BashOperator
+[2025-02-06T09:35:04.075+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-06T09:35:04.089+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-06T09:35:04.091+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

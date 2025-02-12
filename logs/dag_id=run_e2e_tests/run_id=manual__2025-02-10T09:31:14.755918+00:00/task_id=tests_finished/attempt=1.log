@@ -1,0 +1,32 @@
+[2025-02-10T09:31:29.608+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-10T09:31:29.620+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_e2e_tests.tests_finished manual__2025-02-10T09:31:14.755918+00:00 [queued]>
+[2025-02-10T09:31:29.627+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_e2e_tests.tests_finished manual__2025-02-10T09:31:14.755918+00:00 [queued]>
+[2025-02-10T09:31:29.627+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-10T09:31:29.639+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): tests_finished> on 2025-02-10 09:31:14.755918+00:00
+[2025-02-10T09:31:29.654+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=14727) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-10T09:31:29.656+0000] {standard_task_runner.py:72} INFO - Started process 14729 to run task
+[2025-02-10T09:31:29.657+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'run_e2e_tests', 'tests_finished', 'manual__2025-02-10T09:31:14.755918+00:00', '--job-id', '568', '--raw', '--subdir', 'DAGS_FOLDER/generate_dags_from_yaml.py', '--cfg-path', '/tmp/tmpkwc2c_p8']
+[2025-02-10T09:31:29.659+0000] {standard_task_runner.py:105} INFO - Job 568: Subtask tests_finished
+[2025-02-10T09:31:29.710+0000] {task_command.py:467} INFO - Running <TaskInstance: run_e2e_tests.tests_finished manual__2025-02-10T09:31:14.755918+00:00 [running]> on host fbc98e9fe6bb
+[2025-02-10T09:31:29.768+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_e2e_tests' AIRFLOW_CTX_TASK_ID='tests_finished' AIRFLOW_CTX_EXECUTION_DATE='2025-02-10T09:31:14.755918+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-10T09:31:14.755918+00:00'
+[2025-02-10T09:31:29.769+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-10T09:31:29.769+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-10T09:31:29.770+0000] {logging_mixin.py:190} INFO - Current task name:tests_finished state:running start_date:2025-02-10 09:31:29.620840+00:00
+[2025-02-10T09:31:29.770+0000] {logging_mixin.py:190} INFO - Dag name:run_e2e_tests and current dag run status:running
+[2025-02-10T09:31:29.770+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-10T09:31:29.771+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-10T09:31:29.772+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', "echo 'Sending signal that tests are complete'"]
+[2025-02-10T09:31:29.780+0000] {subprocess.py:99} INFO - Output:
+[2025-02-10T09:31:29.783+0000] {subprocess.py:106} INFO - Sending signal that tests are complete
+[2025-02-10T09:31:29.783+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-10T09:31:29.801+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-10T09:31:29.802+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=run_e2e_tests, task_id=tests_finished, run_id=manual__2025-02-10T09:31:14.755918+00:00, execution_date=20250210T093114, start_date=20250210T093129, end_date=20250210T093129
+[2025-02-10T09:31:29.807+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-10T09:31:29.808+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-10T09:31:29.808+0000] {logging_mixin.py:190} INFO - Dag name:run_e2e_tests queued_at:2025-02-10 09:31:14.773768+00:00
+[2025-02-10T09:31:29.808+0000] {logging_mixin.py:190} INFO - Task hostname:fbc98e9fe6bb operator:BashOperator
+[2025-02-10T09:31:29.833+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-10T09:31:29.843+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-10T09:31:29.846+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

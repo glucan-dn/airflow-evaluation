@@ -1,0 +1,16 @@
+run_e2e_tests:
+  default_args:
+    owner: "airflow"
+    start_date: "2025-02-05"
+    retries: 1
+    retry_delay: "300"
+  schedule_interval: null  # External trigger only
+  catchup: false
+  tasks:
+    start_e2e_tests:
+      operator: airflow.operators.bash.BashOperator
+      bash_command: "echo 'Starting end-to-end tests...'; sleep 10; echo 'Tests ran successfully...'"
+    tests_finished:
+      operator: airflow.operators.bash.BashOperator
+      bash_command: "echo 'Sending signal that tests are complete'"
+      dependencies: ["start_e2e_tests"]

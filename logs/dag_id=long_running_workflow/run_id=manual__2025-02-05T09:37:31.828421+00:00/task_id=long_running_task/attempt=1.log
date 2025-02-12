@@ -1,0 +1,31 @@
+[2025-02-05T09:37:34.395+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T09:37:34.403+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: long_running_workflow.long_running_task manual__2025-02-05T09:37:31.828421+00:00 [queued]>
+[2025-02-05T09:37:34.420+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: long_running_workflow.long_running_task manual__2025-02-05T09:37:31.828421+00:00 [queued]>
+[2025-02-05T09:37:34.426+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T09:37:34.545+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): long_running_task> on 2025-02-05 09:37:31.828421+00:00
+[2025-02-05T09:37:34.553+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=48) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T09:37:34.555+0000] {standard_task_runner.py:72} INFO - Started process 49 to run task
+[2025-02-05T09:37:34.558+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'long_running_workflow', 'long_running_task', 'manual__2025-02-05T09:37:31.828421+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/long_running_workflow.py', '--cfg-path', '/tmp/tmpk_b1f52n']
+[2025-02-05T09:37:34.559+0000] {standard_task_runner.py:105} INFO - Job 8: Subtask long_running_task
+[2025-02-05T09:37:34.624+0000] {task_command.py:467} INFO - Running <TaskInstance: long_running_workflow.long_running_task manual__2025-02-05T09:37:31.828421+00:00 [running]> on host ***-worker-1
+[2025-02-05T09:37:34.694+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='long_running_workflow' AIRFLOW_CTX_TASK_ID='long_running_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T09:37:31.828421+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T09:37:31.828421+00:00'
+[2025-02-05T09:37:34.695+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T09:37:34.696+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T09:37:34.696+0000] {logging_mixin.py:190} INFO - Current task name:long_running_task state:running start_date:2025-02-05 09:37:34.403866+00:00
+[2025-02-05T09:37:34.696+0000] {logging_mixin.py:190} INFO - Dag name:long_running_workflow and current dag run status:running
+[2025-02-05T09:37:34.696+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T09:37:34.697+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-05T09:37:34.698+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'sleep 180']
+[2025-02-05T09:37:34.707+0000] {subprocess.py:99} INFO - Output:
+[2025-02-05T09:40:34.714+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-05T09:40:34.766+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T09:40:34.767+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=long_running_workflow, task_id=long_running_task, run_id=manual__2025-02-05T09:37:31.828421+00:00, execution_date=20250205T093731, start_date=20250205T093734, end_date=20250205T094034
+[2025-02-05T09:40:34.778+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-05T09:40:34.779+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-05T09:40:34.779+0000] {logging_mixin.py:190} INFO - Dag name:long_running_workflow queued_at:2025-02-05 09:37:31.864761+00:00
+[2025-02-05T09:40:34.780+0000] {logging_mixin.py:190} INFO - Task hostname:***-worker-1 operator:BashOperator
+[2025-02-05T09:40:34.830+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T09:40:34.846+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T09:40:34.848+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

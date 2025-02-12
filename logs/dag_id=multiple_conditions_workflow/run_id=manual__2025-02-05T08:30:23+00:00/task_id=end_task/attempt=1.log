@@ -1,0 +1,29 @@
+[2025-02-05T08:31:19.712+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T08:31:19.721+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: multiple_conditions_workflow.end_task manual__2025-02-05T08:30:23+00:00 [queued]>
+[2025-02-05T08:31:19.727+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: multiple_conditions_workflow.end_task manual__2025-02-05T08:30:23+00:00 [queued]>
+[2025-02-05T08:31:19.727+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T08:31:19.905+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): end_task> on 2025-02-05 08:30:23+00:00
+[2025-02-05T08:31:19.915+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=137) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T08:31:19.917+0000] {standard_task_runner.py:72} INFO - Started process 138 to run task
+[2025-02-05T08:31:19.917+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'multiple_conditions_workflow', 'end_task', 'manual__2025-02-05T08:30:23+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/multiple_conditions_workflow.py', '--cfg-path', '/tmp/tmpn7zsoy4i']
+[2025-02-05T08:31:19.918+0000] {standard_task_runner.py:105} INFO - Job 19: Subtask end_task
+[2025-02-05T08:31:19.964+0000] {task_command.py:467} INFO - Running <TaskInstance: multiple_conditions_workflow.end_task manual__2025-02-05T08:30:23+00:00 [running]> on host 1f09704d98cf
+[2025-02-05T08:31:20.033+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='multiple_conditions_workflow' AIRFLOW_CTX_TASK_ID='end_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T08:30:23+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T08:30:23+00:00'
+[2025-02-05T08:31:20.035+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T08:31:20.035+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T08:31:20.036+0000] {logging_mixin.py:190} INFO - Current task name:end_task state:running start_date:2025-02-05 08:31:19.722096+00:00
+[2025-02-05T08:31:20.036+0000] {logging_mixin.py:190} INFO - Dag name:multiple_conditions_workflow and current dag run status:running
+[2025-02-05T08:31:20.037+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T08:31:20.037+0000] {multiple_conditions_workflow_tasks.py:33} INFO - Workflow has completed.
+[2025-02-05T08:31:20.038+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-05T08:31:20.044+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T08:31:20.044+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=multiple_conditions_workflow, task_id=end_task, run_id=manual__2025-02-05T08:30:23+00:00, execution_date=20250205T083023, start_date=20250205T083119, end_date=20250205T083120
+[2025-02-05T08:31:20.049+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-05T08:31:20.050+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-05T08:31:20.050+0000] {logging_mixin.py:190} INFO - Dag name:multiple_conditions_workflow queued_at:2025-02-05 08:31:11.117443+00:00
+[2025-02-05T08:31:20.050+0000] {logging_mixin.py:190} INFO - Task hostname:1f09704d98cf operator:PythonOperator
+[2025-02-05T08:31:20.093+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T08:31:20.106+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T08:31:20.107+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

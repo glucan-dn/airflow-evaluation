@@ -1,0 +1,63 @@
+[2025-02-05T14:10:09.603+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T14:10:09.612+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.task_1 manual__2025-02-05T14:10:06.775817+00:00 [queued]>
+[2025-02-05T14:10:09.616+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.task_1 manual__2025-02-05T14:10:06.775817+00:00 [queued]>
+[2025-02-05T14:10:09.616+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T14:10:09.718+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonVirtualenvOperator): task_1> on 2025-02-05 14:10:06.775817+00:00
+[2025-02-05T14:10:09.722+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1759) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T14:10:09.723+0000] {standard_task_runner.py:72} INFO - Started process 1760 to run task
+[2025-02-05T14:10:09.724+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'task_1', 'manual__2025-02-05T14:10:06.775817+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmp4qzsjnzi']
+[2025-02-05T14:10:09.725+0000] {standard_task_runner.py:105} INFO - Job 62: Subtask task_1
+[2025-02-05T14:10:09.751+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.task_1 manual__2025-02-05T14:10:06.775817+00:00 [running]> on host ***-worker-2
+[2025-02-05T14:10:09.803+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='task_1' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T14:10:06.775817+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T14:10:06.775817+00:00'
+[2025-02-05T14:10:09.804+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T14:10:09.804+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T14:10:09.805+0000] {logging_mixin.py:190} INFO - Current task name:task_1 state:running start_date:2025-02-05 14:10:09.612704+00:00
+[2025-02-05T14:10:09.805+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T14:10:09.806+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T14:10:09.806+0000] {baseoperator.py:421} WARNING - PythonVirtualenvOperator.execute cannot be called outside TaskInstance!
+[2025-02-05T14:10:09.807+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvl5m8_bj1 --python=python
+[2025-02-05T14:10:09.810+0000] {process_utils.py:190} INFO - Output:
+[2025-02-05T14:10:10.481+0000] {process_utils.py:194} INFO - created virtual environment CPython3.12.8.final.0-64 in 256ms
+[2025-02-05T14:10:10.482+0000] {process_utils.py:194} INFO -   creator CPython3Posix(dest=/tmp/venvl5m8_bj1, clear=False, no_vcs_ignore=False, global=False)
+[2025-02-05T14:10:10.482+0000] {process_utils.py:194} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2025-02-05T14:10:10.483+0000] {process_utils.py:194} INFO -     added seed packages: pip==24.3.1
+[2025-02-05T14:10:10.483+0000] {process_utils.py:194} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2025-02-05T14:10:10.499+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvl5m8_bj1/bin/pip install -r /tmp/venvl5m8_bj1/requirements.txt
+[2025-02-05T14:10:10.501+0000] {process_utils.py:190} INFO - Output:
+[2025-02-05T14:10:11.610+0000] {process_utils.py:194} INFO - Collecting pandas==2.1.4 (from -r /tmp/venvl5m8_bj1/requirements.txt (line 1))
+[2025-02-05T14:10:11.617+0000] {process_utils.py:194} INFO -   Using cached pandas-2.1.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (18 kB)
+[2025-02-05T14:10:11.796+0000] {process_utils.py:194} INFO - Collecting numpy<2,>=1.26.0 (from pandas==2.1.4->-r /tmp/venvl5m8_bj1/requirements.txt (line 1))
+[2025-02-05T14:10:11.798+0000] {process_utils.py:194} INFO -   Using cached numpy-1.26.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (62 kB)
+[2025-02-05T14:10:11.866+0000] {process_utils.py:194} INFO - Collecting python-dateutil>=2.8.2 (from pandas==2.1.4->-r /tmp/venvl5m8_bj1/requirements.txt (line 1))
+[2025-02-05T14:10:11.868+0000] {process_utils.py:194} INFO -   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2025-02-05T14:10:11.943+0000] {process_utils.py:194} INFO - Collecting pytz>=2020.1 (from pandas==2.1.4->-r /tmp/venvl5m8_bj1/requirements.txt (line 1))
+[2025-02-05T14:10:11.945+0000] {process_utils.py:194} INFO -   Using cached pytz-2025.1-py2.py3-none-any.whl.metadata (22 kB)
+[2025-02-05T14:10:12.003+0000] {process_utils.py:194} INFO - Collecting tzdata>=2022.1 (from pandas==2.1.4->-r /tmp/venvl5m8_bj1/requirements.txt (line 1))
+[2025-02-05T14:10:12.004+0000] {process_utils.py:194} INFO -   Using cached tzdata-2025.1-py2.py3-none-any.whl.metadata (1.4 kB)
+[2025-02-05T14:10:12.064+0000] {process_utils.py:194} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas==2.1.4->-r /tmp/venvl5m8_bj1/requirements.txt (line 1))
+[2025-02-05T14:10:12.065+0000] {process_utils.py:194} INFO -   Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+[2025-02-05T14:10:12.069+0000] {process_utils.py:194} INFO - Using cached pandas-2.1.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (14.3 MB)
+[2025-02-05T14:10:12.109+0000] {process_utils.py:194} INFO - Using cached numpy-1.26.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.9 MB)
+[2025-02-05T14:10:12.155+0000] {process_utils.py:194} INFO - Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2025-02-05T14:10:12.158+0000] {process_utils.py:194} INFO - Using cached pytz-2025.1-py2.py3-none-any.whl (507 kB)
+[2025-02-05T14:10:12.161+0000] {process_utils.py:194} INFO - Using cached tzdata-2025.1-py2.py3-none-any.whl (346 kB)
+[2025-02-05T14:10:12.163+0000] {process_utils.py:194} INFO - Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+[2025-02-05T14:10:12.223+0000] {process_utils.py:194} INFO - Installing collected packages: pytz, tzdata, six, numpy, python-dateutil, pandas
+[2025-02-05T14:10:16.297+0000] {process_utils.py:194} INFO - Successfully installed numpy-1.26.4 pandas-2.1.4 python-dateutil-2.9.0.post0 pytz-2025.1 six-1.17.0 tzdata-2025.1
+[2025-02-05T14:10:16.494+0000] {process_utils.py:194} INFO - 
+[2025-02-05T14:10:16.495+0000] {process_utils.py:194} INFO - [notice] A new release of pip is available: 24.3.1 -> 25.0
+[2025-02-05T14:10:16.495+0000] {process_utils.py:194} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2025-02-05T14:10:16.606+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvl5m8_bj1/bin/python /tmp/venv-callfczpj9xs/script.py /tmp/venv-callfczpj9xs/script.in /tmp/venv-callfczpj9xs/script.out /tmp/venv-callfczpj9xs/string_args.txt /tmp/venv-callfczpj9xs/termination.log
+[2025-02-05T14:10:16.609+0000] {process_utils.py:190} INFO - Output:
+[2025-02-05T14:10:17.170+0000] {python.py:240} INFO - Done. Returned value was: {"age":{"London":25.0,"New York":30.0,"Paris":35.0}}
+[2025-02-05T14:10:17.191+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T14:10:17.192+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=external_signal_workflow, task_id=task_1, run_id=manual__2025-02-05T14:10:06.775817+00:00, execution_date=20250205T141006, start_date=20250205T141009, end_date=20250205T141017
+[2025-02-05T14:10:17.199+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-05T14:10:17.199+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-05T14:10:17.200+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow queued_at:2025-02-05 14:10:06.785372+00:00
+[2025-02-05T14:10:17.200+0000] {logging_mixin.py:190} INFO - Task hostname:***-worker-2 operator:PythonVirtualenvOperator
+[2025-02-05T14:10:17.240+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-05T14:10:17.269+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T14:10:17.271+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

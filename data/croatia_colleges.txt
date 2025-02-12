@@ -1,0 +1,146 @@
+[
+  {
+    "state-province": null,
+    "alpha_two_code": "HR",
+    "country": "Croatia",
+    "web_pages": [
+      "http://www.unidu.hr/"
+    ],
+    "domains": [
+      "unidu.hr"
+    ],
+    "name": "University of Dubrovnik"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "HR",
+    "country": "Croatia",
+    "web_pages": [
+      "http://www.unios.hr/"
+    ],
+    "domains": [
+      "unios.hr"
+    ],
+    "name": "University of Osijek"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "HR",
+    "country": "Croatia",
+    "web_pages": [
+      "http://www.unipu.hr/"
+    ],
+    "domains": [
+      "unipu.hr"
+    ],
+    "name": "University of Pula"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "HR",
+    "country": "Croatia",
+    "web_pages": [
+      "http://www.uniri.hr/"
+    ],
+    "domains": [
+      "uniri.hr"
+    ],
+    "name": "University of Rijeka"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "HR",
+    "country": "Croatia",
+    "web_pages": [
+      "http://www.unist.hr/"
+    ],
+    "domains": [
+      "unist.hr"
+    ],
+    "name": "University of Split"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "HR",
+    "country": "Croatia",
+    "web_pages": [
+      "http://www.unizd.hr/"
+    ],
+    "domains": [
+      "unizd.hr"
+    ],
+    "name": "University of Zadar"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "HR",
+    "country": "Croatia",
+    "web_pages": [
+      "http://www.unizg.hr/"
+    ],
+    "domains": [
+      "unizg.hr"
+    ],
+    "name": "University of Zagreb"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "HR",
+    "country": "Croatia",
+    "web_pages": [
+      "http://www.zsem.hr/"
+    ],
+    "domains": [
+      "zsem.hr"
+    ],
+    "name": "Zagreb School of Economics and Management"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "HR",
+    "country": "Croatia",
+    "web_pages": [
+      "http://www.vern.hr/"
+    ],
+    "domains": [
+      "vern.hr"
+    ],
+    "name": "VERN' University of Applied Sciences"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "HR",
+    "country": "Croatia",
+    "web_pages": [
+      "http://www.tvz.hr/"
+    ],
+    "domains": [
+      "tvz.hr"
+    ],
+    "name": "Zagreb University of Applied Sciences"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "HR",
+    "country": "Croatia",
+    "web_pages": [
+      "http://www.algebra.hr/"
+    ],
+    "domains": [
+      "algebra.hr"
+    ],
+    "name": "Algebra University College"
+  },
+  {
+    "state-province": null,
+    "alpha_two_code": "HR",
+    "country": "Croatia",
+    "web_pages": [
+      "http://www.unin.hr/"
+    ],
+    "domains": [
+      "unin.hr"
+    ],
+    "name": "University North"
+  }
+]

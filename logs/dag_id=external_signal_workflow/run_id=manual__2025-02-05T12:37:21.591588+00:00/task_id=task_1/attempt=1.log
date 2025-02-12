@@ -1,0 +1,186 @@
+[2025-02-05T12:37:25.882+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-05T12:37:25.893+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: external_signal_workflow.task_1 manual__2025-02-05T12:37:21.591588+00:00 [queued]>
+[2025-02-05T12:37:25.899+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: external_signal_workflow.task_1 manual__2025-02-05T12:37:21.591588+00:00 [queued]>
+[2025-02-05T12:37:25.900+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-02-05T12:37:25.913+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonVirtualenvOperator): task_1> on 2025-02-05 12:37:21.591588+00:00
+[2025-02-05T12:37:25.922+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=200) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-05T12:37:25.923+0000] {standard_task_runner.py:72} INFO - Started process 201 to run task
+[2025-02-05T12:37:25.924+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'external_signal_workflow', 'task_1', 'manual__2025-02-05T12:37:21.591588+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/external_signal_workflow.py', '--cfg-path', '/tmp/tmpebkrh_cs']
+[2025-02-05T12:37:25.925+0000] {standard_task_runner.py:105} INFO - Job 15: Subtask task_1
+[2025-02-05T12:37:25.960+0000] {task_command.py:467} INFO - Running <TaskInstance: external_signal_workflow.task_1 manual__2025-02-05T12:37:21.591588+00:00 [running]> on host ***-worker-2
+[2025-02-05T12:37:26.402+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='external_signal_workflow' AIRFLOW_CTX_TASK_ID='task_1' AIRFLOW_CTX_EXECUTION_DATE='2025-02-05T12:37:21.591588+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-05T12:37:21.591588+00:00'
+[2025-02-05T12:37:26.403+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-05T12:37:26.403+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-05T12:37:26.404+0000] {logging_mixin.py:190} INFO - Current task name:task_1 state:running start_date:2025-02-05 12:37:25.893516+00:00
+[2025-02-05T12:37:26.405+0000] {logging_mixin.py:190} INFO - Dag name:external_signal_workflow and current dag run status:running
+[2025-02-05T12:37:26.405+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-05T12:37:26.409+0000] {baseoperator.py:421} WARNING - PythonVirtualenvOperator.execute cannot be called outside TaskInstance!
+[2025-02-05T12:37:26.411+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvktc1jqlo --python=python
+[2025-02-05T12:37:26.412+0000] {process_utils.py:190} INFO - Output:
+[2025-02-05T12:37:27.212+0000] {process_utils.py:194} INFO - created virtual environment CPython3.12.8.final.0-64 in 358ms
+[2025-02-05T12:37:27.213+0000] {process_utils.py:194} INFO -   creator CPython3Posix(dest=/tmp/venvktc1jqlo, clear=False, no_vcs_ignore=False, global=False)
+[2025-02-05T12:37:27.213+0000] {process_utils.py:194} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2025-02-05T12:37:27.214+0000] {process_utils.py:194} INFO -     added seed packages: pip==24.3.1
+[2025-02-05T12:37:27.214+0000] {process_utils.py:194} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2025-02-05T12:37:27.230+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvktc1jqlo/bin/pip install -r /tmp/venvktc1jqlo/requirements.txt
+[2025-02-05T12:37:27.231+0000] {process_utils.py:190} INFO - Output:
+[2025-02-05T12:37:28.377+0000] {process_utils.py:194} INFO - Collecting pandas==2.1.0 (from -r /tmp/venvktc1jqlo/requirements.txt (line 1))
+[2025-02-05T12:37:28.491+0000] {process_utils.py:194} INFO -   Downloading pandas-2.1.0.tar.gz (4.3 MB)
+[2025-02-05T12:37:28.679+0000] {process_utils.py:194} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 33.1 MB/s eta 0:00:00
+[2025-02-05T12:37:28.974+0000] {process_utils.py:194} INFO -   Installing build dependencies: started
+[2025-02-05T12:37:34.188+0000] {process_utils.py:194} INFO -   Installing build dependencies: finished with status 'done'
+[2025-02-05T12:37:34.191+0000] {process_utils.py:194} INFO -   Getting requirements to build wheel: started
+[2025-02-05T12:37:34.523+0000] {process_utils.py:194} INFO -   Getting requirements to build wheel: finished with status 'done'
+[2025-02-05T12:37:34.526+0000] {process_utils.py:194} INFO -   Installing backend dependencies: started
+[2025-02-05T12:37:35.629+0000] {process_utils.py:194} INFO -   Installing backend dependencies: finished with status 'done'
+[2025-02-05T12:37:35.630+0000] {process_utils.py:194} INFO -   Preparing metadata (pyproject.toml): started
+[2025-02-05T12:37:36.940+0000] {process_utils.py:194} INFO -   Preparing metadata (pyproject.toml): finished with status 'error'
+[2025-02-05T12:37:36.944+0000] {process_utils.py:194} INFO -   error: subprocess-exited-with-error
+[2025-02-05T12:37:36.944+0000] {process_utils.py:194} INFO - 
+[2025-02-05T12:37:36.945+0000] {process_utils.py:194} INFO -   × Preparing metadata (pyproject.toml) did not run successfully.
+[2025-02-05T12:37:36.945+0000] {process_utils.py:194} INFO -   │ exit code: 1
+[2025-02-05T12:37:36.945+0000] {process_utils.py:194} INFO -   ╰─> [20 lines of output]
+[2025-02-05T12:37:36.946+0000] {process_utils.py:194} INFO -       + meson setup /tmp/pip-install-cltwrimm/pandas_025de46285c84cefbcdb7ca507568645 /tmp/pip-install-cltwrimm/pandas_025de46285c84cefbcdb7ca507568645/.mesonpy-r0fljs3g/build -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --vsenv --native-file=/tmp/pip-install-cltwrimm/pandas_025de46285c84cefbcdb7ca507568645/.mesonpy-r0fljs3g/build/meson-python-native-file.ini
+[2025-02-05T12:37:36.946+0000] {process_utils.py:194} INFO -       The Meson build system
+[2025-02-05T12:37:36.946+0000] {process_utils.py:194} INFO -       Version: 1.0.1
+[2025-02-05T12:37:36.947+0000] {process_utils.py:194} INFO -       Source dir: /tmp/pip-install-cltwrimm/pandas_025de46285c84cefbcdb7ca507568645
+[2025-02-05T12:37:36.948+0000] {process_utils.py:194} INFO -       Build dir: /tmp/pip-install-cltwrimm/pandas_025de46285c84cefbcdb7ca507568645/.mesonpy-r0fljs3g/build
+[2025-02-05T12:37:36.948+0000] {process_utils.py:194} INFO -       Build type: native build
+[2025-02-05T12:37:36.948+0000] {process_utils.py:194} INFO -       Project name: pandas
+[2025-02-05T12:37:36.949+0000] {process_utils.py:194} INFO -       Project version: 2.1.0
+[2025-02-05T12:37:36.949+0000] {process_utils.py:194} INFO - 
+[2025-02-05T12:37:36.952+0000] {process_utils.py:194} INFO -       ../../meson.build:2:0: ERROR: Unknown compiler(s): [['cc'], ['gcc'], ['clang'], ['nvc'], ['pgcc'], ['icc'], ['icx']]
+[2025-02-05T12:37:36.952+0000] {process_utils.py:194} INFO -       The following exception(s) were encountered:
+[2025-02-05T12:37:36.952+0000] {process_utils.py:194} INFO -       Running `cc --version` gave "[Errno 13] Permission denied: 'cc'"
+[2025-02-05T12:37:36.952+0000] {process_utils.py:194} INFO -       Running `gcc --version` gave "[Errno 13] Permission denied: 'gcc'"
+[2025-02-05T12:37:36.953+0000] {process_utils.py:194} INFO -       Running `clang --version` gave "[Errno 13] Permission denied: 'clang'"
+[2025-02-05T12:37:36.953+0000] {process_utils.py:194} INFO -       Running `nvc --version` gave "[Errno 13] Permission denied: 'nvc'"
+[2025-02-05T12:37:36.953+0000] {process_utils.py:194} INFO -       Running `pgcc --version` gave "[Errno 13] Permission denied: 'pgcc'"
+[2025-02-05T12:37:36.954+0000] {process_utils.py:194} INFO -       Running `icc --version` gave "[Errno 13] Permission denied: 'icc'"
+[2025-02-05T12:37:36.954+0000] {process_utils.py:194} INFO -       Running `icx --version` gave "[Errno 13] Permission denied: 'icx'"
+[2025-02-05T12:37:36.954+0000] {process_utils.py:194} INFO - 
+[2025-02-05T12:37:36.954+0000] {process_utils.py:194} INFO -       A full log can be found at /tmp/pip-install-cltwrimm/pandas_025de46285c84cefbcdb7ca507568645/.mesonpy-r0fljs3g/build/meson-logs/meson-log.txt
+[2025-02-05T12:37:36.955+0000] {process_utils.py:194} INFO -       [end of output]
+[2025-02-05T12:37:36.955+0000] {process_utils.py:194} INFO - 
+[2025-02-05T12:37:36.955+0000] {process_utils.py:194} INFO -   note: This error originates from a subprocess, and is likely not a problem with pip.
+[2025-02-05T12:37:37.096+0000] {process_utils.py:194} INFO - 
+[2025-02-05T12:37:37.096+0000] {process_utils.py:194} INFO - [notice] A new release of pip is available: 24.3.1 -> 25.0
+[2025-02-05T12:37:37.096+0000] {process_utils.py:194} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2025-02-05T12:37:37.097+0000] {process_utils.py:194} INFO - error: metadata-generation-failed
+[2025-02-05T12:37:37.097+0000] {process_utils.py:194} INFO - 
+[2025-02-05T12:37:37.097+0000] {process_utils.py:194} INFO - × Encountered error while generating package metadata.
+[2025-02-05T12:37:37.097+0000] {process_utils.py:194} INFO - ╰─> See above for output.
+[2025-02-05T12:37:37.098+0000] {process_utils.py:194} INFO - 
+[2025-02-05T12:37:37.098+0000] {process_utils.py:194} INFO - note: This is an issue with the package mentioned above, not pip.
+[2025-02-05T12:37:37.099+0000] {process_utils.py:194} INFO - hint: See above for details.
+[2025-02-05T12:37:37.231+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 868, in execute_callable
+    self._prepare_venv(tmp_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 769, in _prepare_venv
+    prepare_virtualenv(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/python_virtualenv.py", line 119, in prepare_virtualenv
+    execute_in_subprocess(pip_cmd)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 175, in execute_in_subprocess
+    execute_in_subprocess_with_kwargs(cmd, cwd=cwd, env=env)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 198, in execute_in_subprocess_with_kwargs
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venvktc1jqlo/bin/pip', 'install', '-r', '/tmp/venvktc1jqlo/requirements.txt']' returned non-zero exit status 1.
+[2025-02-05T12:37:37.276+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-02-05T12:37:37.276+0000] {logging_mixin.py:190} INFO - Task start:2025-02-05 12:37:25.893516+00:00 end:2025-02-05 12:37:37.274732+00:00 duration:11.381216
+[2025-02-05T12:37:37.277+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonVirtualenvOperator): task_1> dag:<DAG: external_signal_workflow> dagrun:<DagRun external_signal_workflow @ 2025-02-05 12:37:21.591588+00:00: manual__2025-02-05T12:37:21.591588+00:00, state:running, queued_at: 2025-02-05 12:37:21.610242+00:00. externally triggered: True>
+[2025-02-05T12:37:37.277+0000] {logging_mixin.py:190} INFO - Failure caused by Command '['/tmp/venvktc1jqlo/bin/pip', 'install', '-r', '/tmp/venvktc1jqlo/requirements.txt']' returned non-zero exit status 1.
+[2025-02-05T12:37:37.277+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=external_signal_workflow, task_id=task_1, run_id=manual__2025-02-05T12:37:21.591588+00:00, execution_date=20250205T123721, start_date=20250205T123725, end_date=20250205T123737
+[2025-02-05T12:37:37.295+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-05T12:37:37.296+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 15 for task task_1 (Command '['/tmp/venvktc1jqlo/bin/pip', 'install', '-r', '/tmp/venvktc1jqlo/requirements.txt']' returned non-zero exit status 1.; 201)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 505, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 868, in execute_callable
+    self._prepare_venv(tmp_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 769, in _prepare_venv
+    prepare_virtualenv(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/python_virtualenv.py", line 119, in prepare_virtualenv
+    execute_in_subprocess(pip_cmd)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 175, in execute_in_subprocess
+    execute_in_subprocess_with_kwargs(cmd, cwd=cwd, env=env)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 198, in execute_in_subprocess_with_kwargs
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venvktc1jqlo/bin/pip', 'install', '-r', '/tmp/venvktc1jqlo/requirements.txt']' returned non-zero exit status 1.
+[2025-02-05T12:37:37.335+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-05T12:37:37.706+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-05T12:37:37.708+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
